@@ -23,12 +23,6 @@ dataset_list = [
     load_dataset("wikipedia", "20220301.en", split="train").shuffle(),  # 英語
 ]
 
-# %%
-# datasetの中身を確認してみます｡
-# 各recordは辞書形式になっています｡大切なのは､ textです｡
-for data in dataset_list[0]:
-    break
-print(data)
 
 # %%
 # 各datasetをmergeして､一つのjsonlにまとめます｡
@@ -39,7 +33,7 @@ print(data)
 if os.path.exists(output_path):
     print(f"jsonl file {output_path} already exists. Overwrite? (y/n)")
     ans = input()
-
+    """
     if ans == "y" or "Y":
         overwrite = True
         print("overwriting files...")
@@ -48,6 +42,8 @@ if os.path.exists(output_path):
     else:
         overwrite = False
         print("aborted.")
+    """
+overwrite = conf["overwrite"]
 if overwrite:
     with open(output_path, "a") as f:
         for dataset in dataset_list:
@@ -64,7 +60,5 @@ if overwrite:
                 if cnt > max_records:
                     break
 
-# %%
-dataset
-
+    # TODO: dataフォルダ内のindex fileを削除
 # %%

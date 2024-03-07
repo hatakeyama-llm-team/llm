@@ -10,12 +10,6 @@ python 1_train_sentencepiece_tokenizer.py
 ### TODO:
 - tokenizerの種類やハイパラの最適化
 
-## 環境構築
-- Megatron-Deepspeedを入れます(1回のみ実行でOKです)
-~~~
-bash 0_install_megatron_ds.sh
-~~~
-
 ## pretrain
 - 学習コードを走らせます
   - 以下はone node, one/multi gpu用のcodeです｡ 学習のハイパラもハードコードされています
