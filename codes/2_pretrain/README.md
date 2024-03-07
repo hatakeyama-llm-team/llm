@@ -24,6 +24,17 @@ bash 2_tokenize.sh
 bash 3_train_node1.sh
 ~~~
 
+## モデル変換
+- [converrt_configを開く](./convert_config.yaml)
+- input_model_dirに､最新のモデルのcheckpointのディレクトリを指定する
+  - -[ここから探す](../../models/gpt/checkpoint/)
+~~~
+bash 4_convert_to_HF.sh
+~~~
+
+## (遊び): 作ったモデルを動かしてみる
+- [こちらのnotebook](./5_play_with_model.ipynb)
+
 ### TODO
 - Wandbとの連携
 - 学習途中からのスタート
