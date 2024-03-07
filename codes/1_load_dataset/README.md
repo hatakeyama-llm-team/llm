@@ -1,0 +1,2 @@
+# データセットのロード
+## ここでは､HuggingFaceのDatasetsライブラリ
