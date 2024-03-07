@@ -1,2 +1,2 @@
 output_path: ../../data/integrated_text.jsonl # output path
-max_records: 1000000 #1 datasetあたりの最大件数｡debug時は小さくする
+max_records: 50000 #1 datasetあたりの最大件数｡debug時は小さくする

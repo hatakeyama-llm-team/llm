@@ -46,6 +46,7 @@ hidden_size=768
 num_attn_heads=12
 #global_batch_size=256
 global_batch_size=128              #大きい方が安定するが､大きすぎると cuda out of memory
+#global_batch_size=32              #大きい方が安定するが､大きすぎると cuda out of memory
 lr=6.0e-4
 min_lr=1.0e-6
 init_std=0.02
@@ -125,6 +126,9 @@ init_std=0.02
 ## The main termination condition, original GPT-3 paper trains for 300B tokens.
 train_tokens_in_billion=300
 train_tokens=$((${train_tokens_in_billion} * 1000 * 1000 * 1000))
+
+#1 epoch程度になるようにtoken数を決める
+train_tokens=$(( 3600 * 1000 * 1000))
 
 # logファイルの680行目付近に､epochsが表示されるので､そこを基準にtokensを決めると良さそう
 
