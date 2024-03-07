@@ -142,7 +142,10 @@ train_tokens=$(( 3600 * 1000 * 1000))
 ## above, and data efficiency techniques may change num tokens in some samples,
 ## so we just set this config large enough to make sure we have enough
 ## processed data and don't terminate by train_samples.
-train_samples=$(( 30000 * 1000 * 1000 * 1000 * 2 / ${seq_len} ))
+
+#ここを適当に大きくしすぎると､必要メモリが増えすぎるので注意｡
+##30000*...とかにすると､RAMが600GB必要､みたいになる
+train_samples=$(( 300 * 1000 * 1000 * 1000 * 2 / ${seq_len} ))
 
 ## Another wall-clock time termination condition in minutes. Set it large
 ## enough to avoid undesired early termination.
