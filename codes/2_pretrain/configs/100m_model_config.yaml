@@ -6,16 +6,15 @@ output_model_dir: ../../models/gpt
 save_interval: 1000
 
 #model params
-model_size: 0.35
-num_layers: 24
-hidden_size: 1024
-num_attn_heads: 16
+model_size: 0.125
+num_layers: 12
+hidden_size: 768
+num_attn_heads: 12
 #global_batch_size=256
-global_batch_size: 64              #大きい方が安定するが､大きすぎると cuda out of memory
-lr: 3.0e-4
+global_batch_size: 128              #大きい方が安定するが､大きすぎると cuda out of memory
+lr: 6.0e-4
 min_lr: 1.0e-6
-init_std: 0.018
-
+init_std: 0.02
 seq_len: 2048
 
 #token info

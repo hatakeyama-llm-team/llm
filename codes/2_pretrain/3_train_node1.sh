@@ -1,16 +1,16 @@
 #!/bin/bash
 
 set -e
-echo ""
+echo "load settings..."
 
 # Stores the directory paths as variables.
 data_path=$(yq -r '.data_path' config.yaml)
 megatron_deepspeed_dir=$(yq -r '.megatron_deepspeed_dir' config.yaml)
 input_tokenizer_file=$(yq -r '.input_tokenizer_file' config.yaml)
-data_path=$(yq -r'.output_model_dir' config.yaml)
-output_model_dir="${output_model_dir%/}"  # Removes a trailing slash "/" if it exists.
+data_path=$(yq -r '.data_path' config.yaml)
+output_model_dir=$(yq -r '.output_model_dir' config.yaml)
+#output_model_dir="${output_model_dir%/}"  # Removes a trailing slash "/" if it exists.
 save_interval=$(yq -e '.save_interval' config.yaml)
-
 # Prints the arguments.
 echo "megatron_deepspeed_dir = ${megatron_deepspeed_dir}"
 echo ""
@@ -147,7 +147,7 @@ train_tokens=$((${train_tokens_in_billion} * 1000 * 1000 * 1000))
 
 
 #1 epoch程度になるようにtoken数を決める
-train_tokens=$(yq e '.train_tokens' config.yaml)
+train_tokens=$(yq -e '.train_tokens' config.yaml)
 # logファイルの680行目付近に､epochsが表示されるので､そこを基準にtokensを決めると良さそう
 
 #普通にepoch数で指定する｡他の指標は十分に大きくしておく｡
@@ -165,7 +165,7 @@ train_tokens=$(yq e '.train_tokens' config.yaml)
 ##30000*...とかにすると､RAMが600GB必要､みたいになる
 #train_samples=$(( 300 * 1000 * 1000 * 1000 * 2 / ${seq_len} ))
 
-train_samples=$(yq e '.train_samples' config.yaml)
+train_samples=$(yq -e '.train_samples' config.yaml)
 
 ## Another wall-clock time termination condition in minutes. Set it large
 ## enough to avoid undesired early termination.
