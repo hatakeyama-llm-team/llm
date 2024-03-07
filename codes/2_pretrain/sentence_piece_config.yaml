@@ -1,0 +1,8 @@
+input: ../../data/integrated_text.jsonl
+output_dir: ../../data/tokenizer
+vocab_size: 5000
+num_threads: 32
+model_prefix: tokenizer
+character_coverage: 0.9995
+model_type: unigram #character_coverage
+train_extremely_large_corpus: True

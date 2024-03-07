@@ -4,3 +4,7 @@
   - https://note.com/kan_hatakeyama/n/nbea55ed4498d
 - 標準コード
   - https://github.com/matsuolab/ucllm_nedo_prod
+
+
+# pip メモ
+pip install apache-beam==2.54.0
