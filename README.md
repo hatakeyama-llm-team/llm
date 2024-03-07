@@ -19,6 +19,7 @@ export PATH="/usr/local/cuda-11.8/bin:$PATH"
 export LD_LIBRARY_PATH="/usr/local/cuda-11.8/lib64:$LD_LIBRARY_PATH"
 ~~~
 - インストール関係
+
 ~~~
 # conda
 conda create -n scr python=3.11 -y
@@ -63,8 +64,19 @@ cd llm-jp-sft
 git fetch origin
 git checkout refs/tags/ucllm_nedo_dev_v20240208.1.0
 ~~~
+- この後に
+~~~
+cd code/2_pretrain
+bash 0_install_megatron_ds.sh
+~~~
 - その他
   - wikipedia (en)をdatasetsから使う場合は､apache-beamを使う
 ~~~
 pip install apache-beam==2.54.0
+~~~
+
+# 全自動(もどき)
+~~~
+cd codes
+bash auto.sh
 ~~~
