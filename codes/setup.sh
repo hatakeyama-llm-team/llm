@@ -59,3 +59,7 @@ cd ../
 
 #wikipediaをdatasetsから使う場合
 pip install apache-beam==2.54.0
+
+#yaml
+pip install yq==3.2.3
+sudo apt-get install jq -y

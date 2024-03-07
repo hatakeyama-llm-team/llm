@@ -25,7 +25,7 @@ cd codes
 bash setup.sh
 ~~~
 
-# 全自動での学習(?)
+# 全自動での学習: 作業中
 ~~~
 cd codes
 bash auto.sh

@@ -20,7 +20,8 @@ python 1_train_sentencepiece_tokenizer.py
     - 125Mで､global_batch_size=128とすると､A100 (80GB) x2 で57GB x2 程度でした｡
 
 ~~~
-bash 2_train_node1.sh
+bash 2_tokenize.sh
+bash 3_train_node1.sh
 ~~~
 
 ### TODO

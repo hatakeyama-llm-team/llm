@@ -4,29 +4,49 @@ set -e
 echo ""
 
 # Stores the directory paths as variables.
-megatron_deepspeed_dir="Megatron-DeepSpeed"
-echo "megatron_deepspeed_dir = ${megatron_deepspeed_dir}"
-echo ""
+data_path=$(yq '.data_path' config.yaml)
+megatron_deepspeed_dir=$(yq '.megatron_deepspeed_dir' config.yaml)
+input_tokenizer_file=$(yq '.input_tokenizer_file' config.yaml)
 
 # Initializes the arguments.
-input_tokenizer_file="../../data/tokenizer/tokenizer.model"
-output_model_dir="../../models/gpt"
-save_interval=1000
-
-
-# Modifies the arguments.
+data_path=$(yq '.output_model_dir' config.yaml)
+data_path=$(yq '.save_interval' config.yaml)
 output_model_dir="${output_model_dir%/}"  # Removes a trailing slash "/" if it exists.
 
 # Prints the arguments.
+echo "megatron_deepspeed_dir = ${megatron_deepspeed_dir}"
+echo ""
+
 echo "input_tokenizer_file = ${input_tokenizer_file}"
 echo "output_model_dir = ${output_model_dir}"
 echo "save_interval = ${save_interval}"
 echo ""
 
+
+model_size=$(yq e '.model_size' config.yaml)
+num_layers=$(yq e '.num_layers' config.yaml)
+hidden_size=$(yq e '.hidden_size' config.yaml)
+num_attn_heads=$(yq e '.num_attn_heads' config.yaml)
+global_batch_size=$(yq e '.global_batch_size' config.yaml)
+lr=$(yq e '.lr' config.yaml)
+min_lr=$(yq e '.min_lr' config.yaml)
+init_std=$(yq e '.init_std' config.yaml)
+seq_len=$(yq e '.seq_len' config.yaml)
+
+
+echo "Model Size: $model_size"
+echo "Number of Layers: $num_layers"
+echo "Hidden Size: $hidden_size"
+echo "Number of Attention Heads: $num_attn_heads"
+echo "Global Batch Size: $global_batch_size"
+echo "Learning Rate: $lr"
+echo "Minimum Learning Rate: $min_lr"
+echo "Init Std: $init_std"
+echo "Seq len: $seq_len"
+
 ###############################################################################
 ### Main configs
 ## GPT-3 models use 2K sequence length/context window
-seq_len=2048
 
 ## The "GPT-3 XXX" below are configs from GPT-3 paper
 ## https://arxiv.org/abs/2005.14165, choose based on
@@ -40,16 +60,16 @@ seq_len=2048
 ## provide better zero-shot eval results.
 
 ## GPT-3 Small 125M
-model_size=0.125
-num_layers=12
-hidden_size=768
-num_attn_heads=12
+#model_size=0.125
+#num_layers=12
+#hidden_size=768
+#num_attn_heads=12
 #global_batch_size=256
-global_batch_size=128              #大きい方が安定するが､大きすぎると cuda out of memory
+#global_batch_size=128              #大きい方が安定するが､大きすぎると cuda out of memory
 #global_batch_size=32              #大きい方が安定するが､大きすぎると cuda out of memory
-lr=6.0e-4
-min_lr=1.0e-6
-init_std=0.02
+#lr=6.0e-4
+#min_lr=1.0e-6
+#init_std=0.02
 
 ## GPT-3 Medium 350M
 # model_size=0.35
@@ -127,9 +147,9 @@ init_std=0.02
 train_tokens_in_billion=300
 train_tokens=$((${train_tokens_in_billion} * 1000 * 1000 * 1000))
 
-#1 epoch程度になるようにtoken数を決める
-train_tokens=$(( 3600 * 1000 * 1000))
 
+#1 epoch程度になるようにtoken数を決める
+train_tokens=$(yq e '.train_tokens' config.yaml)
 # logファイルの680行目付近に､epochsが表示されるので､そこを基準にtokensを決めると良さそう
 
 #普通にepoch数で指定する｡他の指標は十分に大きくしておく｡
@@ -145,7 +165,9 @@ train_tokens=$(( 3600 * 1000 * 1000))
 
 #ここを適当に大きくしすぎると､必要メモリが増えすぎるので注意｡
 ##30000*...とかにすると､RAMが600GB必要､みたいになる
-train_samples=$(( 300 * 1000 * 1000 * 1000 * 2 / ${seq_len} ))
+#train_samples=$(( 300 * 1000 * 1000 * 1000 * 2 / ${seq_len} ))
+
+train_samples=$(yq e '.train_samples' config.yaml)
 
 ## Another wall-clock time termination condition in minutes. Set it large
 ## enough to avoid undesired early termination.
@@ -235,23 +257,7 @@ host="${HOSTNAME}"
 seed=1234
 num_workers=0
 
-# If either arxiv_text_document.bin or arxiv_text_document.idx doesn't exist yet,
-# then downloads arxiv.jsonl and preprocesses the data.
-data_path="../../data/tokenized_text_document"
-if [ ! -f "${data_path}.bin" ] || [ ! -f "${data_path}.idx" ]; then
-    echo "Either ${data_path}.bin or ${data_path}.idx doesn't exist yet, so download arxiv.jsonl and preprocess the data."
-    python ${megatron_deepspeed_dir}/tools/preprocess_data.py \
-        --tokenizer-type SentencePieceTokenizer \
-        --tokenizer-model ${input_tokenizer_file} \
-        --input ../../data/integrated_text.jsonl \
-        --output-prefix ../../data/tokenized \
-        --dataset-impl mmap \
-        --workers 64 \
-        --append-eod
-else
-    echo "Both ${data_path}.bin and ${data_path}.idx already exist."
-fi
-echo ""
+
 
 prescale_grad="true"
 jobname="gpt_${model_size}B_tok${train_tokens_in_billion}B"
