@@ -16,9 +16,11 @@ print(conf)
 
 # %%
 # ここでは例として､日英のwikipediaを読み込んでみます
+
+# TODO: よく考えると､これだとRAMが足りなくなるかも?
 dataset_list = [
     load_dataset("hpprc/wikipedia-20240101", split="train").shuffle(),  # 日本語
-    # load_dataset("wikipedia", "20220301.en").shuffle(), #英語
+    load_dataset("wikipedia", "20220301.en", split="train").shuffle(),  # 英語
 ]
 
 # %%
@@ -61,3 +63,8 @@ if overwrite:
                 cnt += 1
                 if cnt > max_records:
                     break
+
+# %%
+dataset
+
+# %%

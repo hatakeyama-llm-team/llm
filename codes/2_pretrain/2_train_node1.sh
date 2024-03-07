@@ -126,16 +126,24 @@ init_std=0.02
 train_tokens_in_billion=300
 train_tokens=$((${train_tokens_in_billion} * 1000 * 1000 * 1000))
 
+# logファイルの680行目付近に､epochsが表示されるので､そこを基準にtokensを決めると良さそう
+
+#普通にepoch数で指定する｡他の指標は十分に大きくしておく｡
+#...としたかったが､うまく変えられなかった
+#train_epochs=1
+#--train-data-exact-num-epochs ${train_epochs} \
+
 ## train_samples is another termination condition and also affect the number of 
 ## data samples to be indexed. Since we want to reach the train_tokens
 ## above, and data efficiency techniques may change num tokens in some samples,
 ## so we just set this config large enough to make sure we have enough
 ## processed data and don't terminate by train_samples.
-train_samples=$(( 300 * 1000 * 1000 * 1000 * 2 / ${seq_len} ))
+train_samples=$(( 30000 * 1000 * 1000 * 1000 * 2 / ${seq_len} ))
 
 ## Another wall-clock time termination condition in minutes. Set it large
 ## enough to avoid undesired early termination.
 exit_duration=30000000
+exit_duration=300000000000
 ###############################################################################
 ### lr configs
 ## lr warmup and decay duration.
@@ -302,7 +310,7 @@ megatron_options=" \
     --clip-grad 1.0 \
     --hysteresis 2 \
     --num-workers ${num_workers} \
-    --fp16 \
+    --bf16 \
     --seed ${seed} \
     --load ${checkpoint_path} \
     --save ${checkpoint_path} \

@@ -11,7 +11,7 @@ python 1_train_sentencepiece_tokenizer.py
 ## pretrain
 - Megatron-Deepspeedを入れます(1回のみ実行でOKです)
 ~~~
-bash install_megatron_ds.sh
+bash 0_install_megatron_ds.sh
 ~~~
 
 - 学習コードを走らせます
@@ -21,7 +21,7 @@ bash install_megatron_ds.sh
     - 125Mで､global_batch_size=128とすると､A100 (80GB) x2 で57GB x2 程度でした｡
 
 ~~~
-bash install_megatron_ds.sh
+bash 2_train_node1.sh
 ~~~
 
 ### TODO
