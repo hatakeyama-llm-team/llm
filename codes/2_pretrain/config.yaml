@@ -1,8 +1,8 @@
 #data configs
-data_path: "../../data/tokenized_text_document"
-megatron_deepspeed_dir: "Megatron-DeepSpeed"
-input_tokenizer_file: "../../data/tokenizer/tokenizer.model"
-output_model_dir: "../../models/gpt"
+data_path: ../../data/tokenized_text_document
+megatron_deepspeed_dir: Megatron-DeepSpeed
+input_tokenizer_file: ../../data/tokenizer/tokenizer.model
+output_model_dir: ../../models/gpt
 save_interval: 1000
 
 #model params

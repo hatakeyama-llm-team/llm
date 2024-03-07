@@ -4,14 +4,12 @@ set -e
 echo ""
 
 # Stores the directory paths as variables.
-data_path=$(yq '.data_path' config.yaml)
-megatron_deepspeed_dir=$(yq '.megatron_deepspeed_dir' config.yaml)
-input_tokenizer_file=$(yq '.input_tokenizer_file' config.yaml)
-
-# Initializes the arguments.
-data_path=$(yq '.output_model_dir' config.yaml)
-data_path=$(yq '.save_interval' config.yaml)
+data_path=$(yq -r '.data_path' config.yaml)
+megatron_deepspeed_dir=$(yq -r '.megatron_deepspeed_dir' config.yaml)
+input_tokenizer_file=$(yq -r '.input_tokenizer_file' config.yaml)
+data_path=$(yq -r'.output_model_dir' config.yaml)
 output_model_dir="${output_model_dir%/}"  # Removes a trailing slash "/" if it exists.
+save_interval=$(yq -e '.save_interval' config.yaml)
 
 # Prints the arguments.
 echo "megatron_deepspeed_dir = ${megatron_deepspeed_dir}"
@@ -23,15 +21,15 @@ echo "save_interval = ${save_interval}"
 echo ""
 
 
-model_size=$(yq e '.model_size' config.yaml)
-num_layers=$(yq e '.num_layers' config.yaml)
-hidden_size=$(yq e '.hidden_size' config.yaml)
-num_attn_heads=$(yq e '.num_attn_heads' config.yaml)
-global_batch_size=$(yq e '.global_batch_size' config.yaml)
-lr=$(yq e '.lr' config.yaml)
-min_lr=$(yq e '.min_lr' config.yaml)
-init_std=$(yq e '.init_std' config.yaml)
-seq_len=$(yq e '.seq_len' config.yaml)
+model_size=$(yq -e '.model_size' config.yaml)
+num_layers=$(yq -e '.num_layers' config.yaml)
+hidden_size=$(yq -e '.hidden_size' config.yaml)
+num_attn_heads=$(yq -e '.num_attn_heads' config.yaml)
+global_batch_size=$(yq -e '.global_batch_size' config.yaml)
+lr=$(yq -e '.lr' config.yaml)
+min_lr=$(yq -e '.min_lr' config.yaml)
+init_std=$(yq -e '.init_std' config.yaml)
+seq_len=$(yq -e '.seq_len' config.yaml)
 
 
 echo "Model Size: $model_size"
