@@ -63,3 +63,9 @@ pip install apache-beam==2.54.0
 #yaml
 pip install yq==3.2.3
 sudo apt-get install jq -y
+
+
+# megatron-deepspeedのファイルの上書き
+
+#データ学習時に､読み込みがshuffleされるコードを無効化 (BTMは学習順序が大切なので｡)
+cp codes/2_pretrain/original_codes/gpt_dataset.py codes/2_pretrain/Megatron-DeepSpeed/megatron/data/gpt_dataset.py

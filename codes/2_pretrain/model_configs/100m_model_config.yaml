@@ -17,6 +17,10 @@ min_lr: 1.0e-6
 init_std: 0.02
 seq_len: 2048
 
+#deepspeed
+zero_stage: 0
+
+
 #token info
 train_tokens: 3600000000 # 3.6 b, 1 epochになるように調整
 

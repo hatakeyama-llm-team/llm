@@ -19,8 +19,8 @@ print(conf)
 
 # TODO: よく考えると､これだとRAMが足りなくなるかも?
 dataset_list = [
-    load_dataset("hpprc/wikipedia-20240101", split="train").shuffle(),  # 日本語
     load_dataset("wikipedia", "20220301.en", split="train").shuffle(),  # 英語
+    load_dataset("hpprc/wikipedia-20240101", split="train").shuffle(),  # 日本語
 ]
 
 
@@ -30,19 +30,7 @@ dataset_list = [
 # 各datasetは予めクリーニング, dedupされている必要があります｡
 # TODO: BTMのため､ジャンル別にデータを並べ替えたい
 
-if os.path.exists(output_path):
-    print(f"jsonl file {output_path} already exists. Overwrite? (y/n)")
-    ans = input()
-    """
-    if ans == "y" or "Y":
-        overwrite = True
-        print("overwriting files...")
-        with open(output_path, "w") as f:
-            f.write("")
-    else:
-        overwrite = False
-        print("aborted.")
-    """
+
 overwrite = conf["overwrite"]
 if overwrite:
     with open(output_path, "a") as f:

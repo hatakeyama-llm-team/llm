@@ -37,4 +37,3 @@ bash 4_convert_to_HF.sh
 
 ### TODO
 - Wandbとの連携
-- 学習途中からのスタート

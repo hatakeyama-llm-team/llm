@@ -4,10 +4,9 @@ set -e
 echo "load settings..."
 
 # Stores the directory paths as variables.
-data_path=$(yq -r '.data_path' config.yaml)
 megatron_deepspeed_dir=$(yq -r '.megatron_deepspeed_dir' config.yaml)
 input_tokenizer_file=$(yq -r '.input_tokenizer_file' config.yaml)
-data_path=$(yq -r '.data_path' config.yaml)
+tokenized_data_path=$(yq -r '.tokenized_data_path' config.yaml)
 output_model_dir=$(yq -r '.output_model_dir' config.yaml)
 #output_model_dir="${output_model_dir%/}"  # Removes a trailing slash "/" if it exists.
 save_interval=$(yq -e '.save_interval' config.yaml)
@@ -208,7 +207,7 @@ pp_size=1
 no_pp="false"
 
 ## ZeRO-based data parallelism, stage=0 will disable ZeRO
-zero_stage=0
+zero_stage=$(yq -e '.zero_stage' config.yaml)
 
 ## Total number of GPUs.
 num_gpus_pernode=$(nvidia-smi --query-gpu=name --format=csv,noheader | wc -l)
@@ -286,7 +285,7 @@ mkdir -p ${deepspeed_config_dir}
 data_options=" \
     --tokenizer-type SentencePieceTokenizer \
     --tokenizer-model ${input_tokenizer_file} \
-    --data-path ${data_path} \
+    --data-path ${tokenized_data_path} \
     --data-impl mmap"
 
 ## If CL is used, make sure to set "--split" the same as what you used during
