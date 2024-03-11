@@ -1,13 +1,13 @@
 #data configs
 
 #tokenize
-input_jsonl: ../../data/wikipedia_grad_en_to_ja.jsonl
-output_prefix: ../../data/tokenized_wikipedia
+input_jsonl: ../../data/text/wikipedia_grad_en_to_ja.jsonl
+output_prefix: ../../data/text/tokenized_wikipedia
 
-tokenized_data_path: ../../data/tokenized_wikipedia_text_document
+tokenized_data_path: ../../data/text/tokenized_wikipedia_text_document
 
 megatron_deepspeed_dir: Megatron-DeepSpeed
-input_tokenizer_file: ../../data/tokenizer/tokenizer.model
+input_tokenizer_file: ../../data/tokenizers/wiki_250k_vocab/tokenizer.model
 output_model_dir: ../../models/gpt
 save_interval: 3000
 
@@ -19,6 +19,7 @@ num_attn_heads: 16
 #global_batch_size=256
 global_batch_size: 64              #大きい方が安定するが､大きすぎると cuda out of memory
 global_batch_size: 72              #大きい方が安定するが､大きすぎると cuda out of memory
+global_batch_size: 18              #大きい方が安定するが､大きすぎると cuda out of memory
 lr: 3.0e-4
 min_lr: 1.0e-6
 init_std: 0.018
@@ -29,7 +30,8 @@ seq_len: 2048
 zero_stage: 1
 
 #token info
-train_tokens: 3600000000 # 3.6 b, 1 epochになるように調整
+#train_tokens: 3600000000 # 3.6 b, 1 epochになるように調整
+train_tokens: 1680000000 # 3.6 b, 1 epochになるように調整
 
 #train samples
 train_samples: 300000000 # 300B相当｡ もっと学習させる場合は大きくすること!!

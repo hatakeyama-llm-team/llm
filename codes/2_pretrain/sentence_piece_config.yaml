@@ -1,6 +1,6 @@
-input: ../../data/integrated_text.jsonl
-output_dir: ../../data/tokenizer
-vocab_size: 5000
+input: ../../data/text/wikipedia_grad_en_to_ja.jsonl
+output_dir: ../../data/tokenizers/wiki_65k_vocab
+vocab_size: 65000
 num_threads: 32
 model_prefix: tokenizer
 character_coverage: 0.9995
