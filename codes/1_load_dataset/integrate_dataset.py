@@ -2,7 +2,9 @@
 # 種々のdatasetをintagrateします
 
 # %%
-from datasets import load_dataset
+from src.loaders import wiki_en_loader, wiki_ja_loader
+import random
+from src.RecordDistributor import RecordDistributor
 import json
 import os
 from tqdm import tqdm
@@ -15,38 +17,29 @@ max_records = conf["max_records"]
 print(conf)
 
 # %%
-# ここでは例として､日英のwikipediaを読み込んでみます
-
-# TODO: よく考えると､これだとRAMが足りなくなるかも?
-dataset_list = [
-    load_dataset("wikipedia", "20220301.en", split="train").shuffle(),  # 英語
-    load_dataset("hpprc/wikipedia-20240101", split="train").shuffle(),  # 日本語
-]
-
 
 # %%
-# 各datasetをmergeして､一つのjsonlにまとめます｡
-# ファイルは output_pathに生成されます
-# 各datasetは予めクリーニング, dedupされている必要があります｡
-# TODO: BTMのため､ジャンル別にデータを並べ替えたい
+dataset_dict = {
+    "wiki(ja)": {
+        "loader": wiki_ja_loader,
+        "n_records": max_records,
+        "stage_ratio": [1, 1, 9],  # 各ステージでのデータ配分
+    },
+    "wiki(en)": {
+        "loader": wiki_en_loader,
+        "n_records": max_records,
+        "stage_ratio": [1, 9, 1],
+    },
+}
 
+# %%
+distributor = RecordDistributor(dataset_dict)
+distributor.load_datasets()
 
-overwrite = conf["overwrite"]
-if overwrite:
-    with open(output_path, "a") as f:
-        for dataset in dataset_list:
-            print(dataset)
-            cnt = 0
-            for data in tqdm(dataset):
-                out_text = json.dumps(
-                    {"text": data["text"]}, ensure_ascii=False)
-                # jsonlで書き出し
+# %%
+distributor.dataset_dict, distributor.n_records_per_stage, distributor.n_records_per_stage
 
-                f.write(out_text+"\n")
+# %%
+distributor.write_jsonl(output_path, overwrite=conf["overwrite"])
 
-                cnt += 1
-                if cnt > max_records:
-                    break
-
-    # TODO: dataフォルダ内のindex fileを削除
 # %%
