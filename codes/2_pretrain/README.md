@@ -1,5 +1,5 @@
 # 事前学習します
-## tokenizer
+## tokenizerの学習
 - 設定は[yaml](sentence_piece_config.yaml)
 - Wikipedia 200万文書で15 minほどかかりました｡
 
@@ -12,15 +12,17 @@ python 1_train_sentencepiece_tokenizer.py
 
 ## pretrain
 - 学習コードを走らせます
-  - 以下はone node, one/multi gpu用のcodeです｡ 学習のハイパラもハードコードされています
-  - 実行すると､はじめに[data](../../data/) folerに､tokenizeされたデータ(tokenized_text_document.bin/idx)が生成されます｡
-    - データベースを更新した場合は､これらのファイルを削除すること
-    - wikipedia記事200万件を処理するのに1000 secほど｡
-  - tokenize後､しばらく待っていると､学習が始まります｡cuda out of memoryの場合は､50行目付近の､global_batch_sizeを減らします
-    - 125Mで､global_batch_size=128とすると､A100 (80GB) x2 で57GB x2 程度でした｡
-
+- tokenizeを実行すると､[data](../../data/) folerに､tokenizeされたデータ(例：tokenized_text_document.bin/idx)が生成されます｡
+  - wikipedia記事200万件を処理するのに1000 secほど｡
 ~~~
 bash 2_tokenize.sh
+
+~~~
+- pretrainを実行すると、学習が始まります｡cuda out of memoryの場合は､global_batch_sizeを減らします
+  - 125Mで､global_batch_size=128とすると､A100 (80GB) x2 で57GB x2 程度でした｡
+  - 300Mでは72 (zero stage 1)で75 GB x2 でした
+
+
 bash 3_train_node1.sh
 ~~~
 

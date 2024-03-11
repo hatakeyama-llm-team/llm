@@ -1,7 +1,7 @@
 #data configs
 
 #tokenize
-input_jsonl: ../../data/wikipedia.jsonl
+input_jsonl: ../../data/wikipedia_grad_en_to_ja.jsonl
 output_prefix: ../../data/tokenized_wikipedia
 
 tokenized_data_path: ../../data/tokenized_wikipedia_text_document
@@ -9,7 +9,7 @@ tokenized_data_path: ../../data/tokenized_wikipedia_text_document
 megatron_deepspeed_dir: Megatron-DeepSpeed
 input_tokenizer_file: ../../data/tokenizer/tokenizer.model
 output_model_dir: ../../models/gpt
-save_interval: 1000
+save_interval: 3000
 
 #model params
 model_size: 0.35

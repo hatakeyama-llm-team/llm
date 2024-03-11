@@ -25,6 +25,17 @@ cd codes
 bash setup.sh
 ~~~
 
+# 学習法
+## [1_load_dataset](./codes/1_load_dataset/)
+- datasetsライブラリをもとに、データを読み込んで行きます
+- Branch-Train-Merge/カリキュラム学習的な考えを想定したシステム設計なので、どのデータ配分などもここで決めます
+  
+## [2_pretrain](./codes/2_pretrain/)
+- トークナイザーの学習、トークナイズ、事前学習、HuggingFace modelへの変換を行います。
+
+## ファインチューニング、評価
+- 今はあまり必要ないのと、そこまで実装難易度が高くないので、今後の適当なタイミングで作ります。
+
 # 全自動での学習: 作業中
 ~~~
 cd codes
