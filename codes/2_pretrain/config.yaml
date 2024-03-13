@@ -7,8 +7,8 @@ tokenized_data_path: ../../data/text/0313tokenized_mc4_wiki_en_text_document
 
 #train
 megatron_deepspeed_dir: Megatron-DeepSpeed
-input_tokenizer_file: ../../data/tokenizers/mc4_wiki_65k_vocab/tokenizer.model
-output_model_dir: ../../models/gpt
+input_tokenizer_file: ../../model/tokenizers/mc4_wiki_65k_vocab/tokenizer.model
+output_model_dir: ../../models/pretrain/gpt
 save_interval: 3000
 
 #model params

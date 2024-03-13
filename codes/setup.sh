@@ -60,10 +60,10 @@ cd ../
 # ft
 cd 3_finetune
 # mainブランチではエラーが起きる場合があるため、指定のタグにチェックアウト。
-#git clone https://github.com/hotsuyuki/llm-jp-sft
-#cd llm-jp-sft
-#git fetch origin
-#git checkout refs/tags/ucllm_nedo_dev_v20240208.1.0
+git clone https://github.com/hotsuyuki/llm-jp-sft
+cd llm-jp-sft
+git fetch origin
+git checkout refs/tags/ucllm_nedo_dev_v20240208.1.0
 
 cd ../
 
@@ -84,7 +84,7 @@ cp codes/2_pretrain/original_codes/gpt_dataset.py codes/2_pretrain/Megatron-Deep
 #eval
 
 cd 4_eval
-#git clone https://github.com/matsuolab/llm-leaderboard.git
+git clone https://github.com/matsuolab/llm-leaderboard.git
 
 conda create -n llmeval python=3.11 -y
 conda activate llmeval

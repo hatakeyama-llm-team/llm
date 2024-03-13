@@ -2,7 +2,7 @@
 huggingface_input_model: kanhatakeyama/0314gpt_mc4_wiki_en   
 
 #ファインチューニングするデータ
-dataset_path: sample_data/databricks-dolly-15k-ja_converted_short.jsonl
+dataset_path: sample_data/databricks-dolly-15k-ja_converted.jsonl
 
 #モデルの保存場所
 output_tokenizer_and_model_dir: ../../models/hf_ft/0314gpt_mc4_wiki_en_ft  
