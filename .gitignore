@@ -164,5 +164,5 @@ data/*
 Megatron-DeepSpeed
 models
 apex
-codes/4_eval/llm-leaderboard/wandb
 wandb
+codes/4_eval/llm-leaderboard/artifacts
