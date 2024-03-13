@@ -1,2 +1,2 @@
-input_model_dir: ../../models/0312gpt_wiki_300m_grad_en_to_ja/checkpoint/gpt_0.35B_tok300B_lr0.0003_min1e-06_w3000M_d300B_cosine_gbs72_mbs36_g2_z1_pp1_seed1234_rebase/global_step24415
-output_tokenizer_and_model_dir: ../../models/hf/0312wiki300m_grad_en_to_ja_fin/
+input_model_dir: ../../models/gpt/checkpoint/gpt_0.35B_tok300B_lr0.0003_min1e-06_w3000M_d300B_cosine_gbs46_mbs23_g2_z1_pp1_seed1234_rebase/global_step19850
+output_tokenizer_and_model_dir: ../../models/hf/0313wiki300m_grad_en_to_ja_fin_65k_vocab/

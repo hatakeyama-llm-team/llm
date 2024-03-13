@@ -2,7 +2,7 @@
 # 種々のdatasetをintagrateします
 
 # %%
-from src.loaders import wiki_en_loader, wiki_ja_loader
+from src.loaders import *
 import random
 from src.RecordDistributor import RecordDistributor
 import json
@@ -25,6 +25,7 @@ dataset_dict = {
         "n_records": max_records,
         "stage_ratio": [1, 1, 9],  # 各ステージでのデータ配分
     },
+
     "wiki(en)": {
         "loader": wiki_en_loader,
         "n_records": max_records,
