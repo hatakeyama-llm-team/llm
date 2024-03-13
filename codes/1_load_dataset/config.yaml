@@ -1,4 +1,5 @@
 output_path: ../../data/text/0313mc4_wiki_en.jsonl # output path
 max_records: 1000000 #1 datasetあたりの最大件数｡debug時は小さくする
 #max_records: 10000 #1 datasetあたりの最大件数｡debug時は小さくする
+max_records: 100000 #1 datasetあたりの最大件数｡debug時は小さくする
 overwrite: True # output_pathを上書きする

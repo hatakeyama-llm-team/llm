@@ -13,7 +13,7 @@ echo ""
 
 # Initializes the arguments.
 input_model_name_or_path=$(yq -r '.huggingface_input_model' config.yaml)
-output_tokenizer_and_model_dir=$(yq -r '.output_model_dir' config.yaml)
+output_tokenizer_and_model_dir=$(yq -r '.output_tokenizer_and_model_dir' config.yaml)
 
 # Prints the arguments.
 echo "input_model_name_or_path = ${input_model_name_or_path}"
