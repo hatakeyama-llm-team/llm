@@ -57,6 +57,16 @@ python setup.py install
 
 cd ../
 
+# ft
+cd 3_finetune
+# mainブランチではエラーが起きる場合があるため、指定のタグにチェックアウト。
+git clone https://github.com/hotsuyuki/llm-jp-sft
+cd llm-jp-sft
+git fetch origin
+git checkout refs/tags/ucllm_nedo_dev_v20240208.1.0
+
+cd ../
+
 #wikipediaをdatasetsから使う場合
 pip install apache-beam==2.54.0
 
