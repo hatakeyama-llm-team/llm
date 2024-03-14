@@ -43,10 +43,14 @@ python ./llm-jp-sft/train.py \
     --data_files ${dataset_file} \
     --model_name_or_path ${input_model_name_or_path} \
     --output_dir ${output_tokenizer_and_model_dir} \
-    --instruction_template "### Human:" \
-    --response_template "### Assistant:" \
+    --instruction_template "### 指示:" \
+    --response_template "### 応答:" \
     2>&1 | tee ${log_path}/${host}_${current_time}.log
 
+#    --instruction_template "以下は、タスクを説明する指示です。要求を適切に満たす応答を書きなさい。\n\n### 指示:\n" \
+#    --response_template "\n\n### 応答:\n" \
+#    --instruction_template "### Human:" \
+#    --response_template "### Assistant:" \
 echo ""
 echo "Finished to finetune the pretrained model."
 echo ""

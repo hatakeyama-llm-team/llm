@@ -1,5 +1,5 @@
-input: ../../data/text/0313mc4_wiki_en.jsonl
-output_dir: ../../data/tokenizers/mc4_wiki_65k_vocab
+input: ../../data/text/0313wiki.jsonl
+output_dir: ../../models/tokenizers/wiki_65k_vocab
 vocab_size: 65000
 num_threads: 32
 model_prefix: tokenizer

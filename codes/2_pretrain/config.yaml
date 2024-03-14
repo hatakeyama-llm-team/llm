@@ -1,14 +1,14 @@
 #data configs
 
 #tokenize
-input_jsonl: ../../data/text/0313mc4_wiki_en.jsonl
-output_prefix: ../../data/text/0313tokenized_mc4_wiki_en
-tokenized_data_path: ../../data/text/0313tokenized_mc4_wiki_en_text_document
+input_jsonl: ../../data/text/0313wiki.jsonl
+output_prefix: ../../data/text/0313tokenized_wiki
 
 #train
+tokenized_data_path: ../../data/text/0313tokenized_wiki_text_document
 megatron_deepspeed_dir: Megatron-DeepSpeed
-input_tokenizer_file: ../../data/tokenizers/mc4_wiki_65k_vocab/tokenizer.model
-output_model_dir: ../../models/gpt
+input_tokenizer_file: ../../models/tokenizers/wiki_65k_vocab/tokenizer.model
+output_model_dir: ../../models/pretrain/gpt
 save_interval: 3000
 
 #model params
@@ -19,7 +19,7 @@ num_attn_heads: 16
 #global_batch_size=256
 global_batch_size: 72              #大きい方が安定するが､大きすぎると cuda out of memory
 global_batch_size: 18              #大きい方が安定するが､大きすぎると cuda out of memory
-global_batch_size: 46              #大きい方が安定するが､大きすぎると cuda out of memory
+global_batch_size: 160              #大きい方が安定するが､大きすぎると cuda out of memory
 lr: 3.0e-4
 min_lr: 1.0e-6
 init_std: 0.018
@@ -32,6 +32,7 @@ zero_stage: 1
 #token info
 train_tokens: 3600000000 # 3.6 b, 1 epochになるように調整
 train_tokens: 2850000000 # 3.6 b, 1 epochになるように調整
+train_tokens: 144112147
 
 #train samples
 train_samples: 300000000 # 300B相当｡ もっと学習させる場合は大きくすること!!

@@ -1,4 +1,5 @@
-input_model_dir: ../../models/0314gpt_mc4_wiki_en/checkpoint/gpt_0.35B_tok300B_lr0.0003_min1e-06_w3000M_d300B_cosine_gbs46_mbs23_g2_z1_pp1_seed1234_rebase/global_step30253
-output_tokenizer_and_model_dir: ../../models/hf/0314gpt_mc4_wiki_en
-huggingface_name: 0314gpt_mc4_wiki_en
+input_model_dir: ../../models/pretrain/0314gpt_mc4_wiki_en/checkpoint/gpt_0.35B_tok300B_lr0.0003_min1e-06_w3000M_d300B_cosine_gbs46_mbs23_g2_z1_pp1_seed1234_rebase/global_step30253
+input_model_dir: ../../models/pretrain/gpt/checkpoint/gpt_0.35B_tok300B_lr0.0003_min1e-06_w3000M_d300B_cosine_gbs160_mbs20_g8_z1_pp1_seed1234_rebase/global_step440
+output_tokenizer_and_model_dir: ../../models/hf/0313wiki
+huggingface_name: 0313gpt_wiki
 test_prompt_text: こんにちは､
