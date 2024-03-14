@@ -18,7 +18,6 @@ sudo docker build -t llm .
 #sudo docker run --gpus all --rm -it -p 8899:8888 -v .:/home/llm llm bash
 
 #1回目の実行
-sudo docker run --gpus all -it -p 8899:8888 -v .:/home/llm llm bash
 sudo docker run --gpus all --shm-size='1gb' -it -p 8899:8888 -v .:/home/llm llm bash
 
 #2回目以降
