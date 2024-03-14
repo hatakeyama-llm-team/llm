@@ -1,0 +1,8 @@
+input: ../../data/text/0313mc4_wiki_en.jsonl
+output_dir: ../../data/tokenizers/mc4_wiki_65k_vocab
+vocab_size: 65000
+num_threads: 32
+model_prefix: tokenizer
+character_coverage: 0.9995
+model_type: unigram #character_coverage
+train_extremely_large_corpus: True

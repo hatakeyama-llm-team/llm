@@ -159,4 +159,10 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-ucllm_nedo_pro/
+ucllm_nedo_prod/
+data/*
+Megatron-DeepSpeed
+models
+apex
+codes/4_eval/llm-leaderboard/wandb
+wandb
