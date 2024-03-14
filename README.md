@@ -9,8 +9,31 @@
 - Dockefile made by ssone
 - 数十分はかかります｡
 ~~~
+git clone https://github.com/hatakeyama-llm-team/llm.git
 sudo docker build -t llm .
 ~~~
+
+- 実行
+~~~
+#sudo docker run --gpus all --rm -it -p 8899:8888 -v .:/home/llm llm bash
+
+#1回目の実行
+sudo docker run --gpus all -it -p 8899:8888 -v .:/home/llm llm bash
+
+#2回目以降
+sudo docker start -i ...
+
+
+sudo chmod -R 777 llm
+cd llm/
+conda activate scr
+
+#初回起動時はこれをやる
+bash docker_setup.sh
+
+~~~
+
+
 
 # 直接､環境構築する場合
 - cuda (nvcc)の11.8が必要｡ドライバは新しくても問題ない

@@ -104,7 +104,7 @@ EXPOSE 8888
 # ENV OPENAI_API_KEY="sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 USER $USERNAME
-WORKDIR /home/$USERNAME
+WORKDIR /home/
 
 CMD ["/usr/sbin/sshd", "-D"]
 SHELL ["/bin/bash", "-c"]

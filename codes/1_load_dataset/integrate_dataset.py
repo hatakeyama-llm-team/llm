@@ -9,6 +9,14 @@ import json
 import os
 from tqdm import tqdm
 import yaml
+import os
+
+def make_dir(path):
+    if not os.path.exists(path):
+        os.mkdir(path)
+
+make_dir("../../data")
+make_dir("../../data/text")
 
 with open('config.yaml', 'r') as file:
     conf = yaml.safe_load(file)

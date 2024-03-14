@@ -15,3 +15,8 @@ python integrate_dataset.py
 ~~~
 
 - 実行すると､[data](../../data/text)フォルダに､全てのテキストを集約した超巨大なjsonlファイル(integrated_text.jsonl)が生成されます
+
+- 終わったら､2_pretrainに移動します
+~~~
+cd ../2_pretrain
+~~~

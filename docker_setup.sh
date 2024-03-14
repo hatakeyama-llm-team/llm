@@ -1,0 +1,29 @@
+
+#Megatron-DeepSpeedのレポジトリをクローン。
+cd codes/2_pretrain
+git clone https://github.com/hotsuyuki/Megatron-DeepSpeed
+
+# mainブランチではエラーが起きる場合があるため、指定のタグにチェックアウト。
+cd Megatron-DeepSpeed/
+git fetch origin && git checkout refs/tags/ucllm_nedo_dev_v20240205.1.0
+
+#install
+python setup.py install
+
+cd ../
+
+#yq
+pip install yq==3.2.3
+sudo apt-get install jq -y
+
+#apex
+git clone https://github.com/NVIDIA/apex
+cd apex
+# mainブランチではエラーが起きる場合があるため、指定のタグにチェックアウト。
+git fetch origin && git checkout refs/tags/23.08
+
+#install
+pip install -v --disable-pip-version-check --no-cache-dir --no-build-isolation --config-settings "--build-option=--cpp_ext" --config-settings "--build-option=--cuda_ext" ./
+
+# apex_C.cpython-311-x86_64-linux-gnu.soが作成されていることを確認。
+find build/lib.linux-x86_64-cpython-311/ -name apex_C.cpython-311-x86_64-linux-gnu.so
