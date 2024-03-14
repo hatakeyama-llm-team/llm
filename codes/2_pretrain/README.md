@@ -1,14 +1,22 @@
 # 事前学習します
-## tokenizerの学習
-- 設定は[yaml](sentence_piece_config.yaml)
+## 1. tokenizerの学習
+- 設定は[yaml](sentence_piece_config.yaml)をいじります｡
+  - 主な設定項目
+    - input: 学習データ(jsonl)のパス
+    - output_dir: 学習したトークナイザーの保存パス
 - Wikipedia 200万文書で15 minほどかかりました｡
 
 ~~~
 python 1_train_sentencepiece_tokenizer.py 
 ~~~
-- 実行すると､[tokenizer](../../data/tokenizer/)フォルダにmodelと[vocab](../../data/tokenizer/tokenizer.vocab)ファイルが生成されます
-### TODO:
-- tokenizerの種類やハイパラの最適化
+
+- 実行すると､[tokenizers](../../model/tokenizers/)フォルダにmodelとvocabファイルが生成されます
+  - vocabには､語彙が収録されています｡一度見てみるのがオススメです｡
+
+## 2. tokenize
+~~~
+bash 2_tokenize.sh
+~~~
 
 ## pretrain
 - 学習コードを走らせます

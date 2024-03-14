@@ -16,13 +16,29 @@ output_path = conf["output_path"]
 max_records = conf["max_records"]
 print(conf)
 
-# %%
 
-# %%
+"""
+loader: datasetsのloaderを入れてます｡ 
+n_records: 最大の学習件数
+stage_ratio: 各ステージで､どの程度､データを食わせるかを決めます｡
+
+例:
+wiki(ja): [1,1,9]
+wiki(en): [1,9,1]
+の場合､
+データセットを3stageに分けます｡
+
+1st stageでは､ wiki(ja)の10%､wiki(en)の10%を混ぜて学習させます
+2nd stageでは､ wiki(ja)の10%､wiki(en)の90%を混ぜて学習させます
+3rd stageでは､ wiki(ja)の90%､wiki(en)の10%を混ぜて学習させます
+
+このようなステージ分けをすることで､一種のカリキュラム学習を行うことが出来ます
+"""
+
 dataset_dict = {
     "wiki(ja)": {
-        "loader": wiki_ja_loader,
-        "n_records": max_records,
+        "loader": wiki_ja_loader, #日本語版のwikipediaのloaderを使います｡
+        "n_records": max_records, #最大件数
         "stage_ratio": [1, 1, 9],  # 各ステージでのデータ配分
     },
 

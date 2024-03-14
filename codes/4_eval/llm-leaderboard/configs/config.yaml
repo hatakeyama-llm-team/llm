@@ -15,7 +15,7 @@ api: false
 model:
   use_wandb_artifacts: false
   artifacts_path: ""
-  pretrained_model_name_or_path: "kanhatakeyama/0314gpt_mc4_wiki_en_ft" # huggingfaceのupload先を指定してください
+  pretrained_model_name_or_path: "kanhatakeyama/0313gpt_wiki_ft" # huggingfaceのupload先を指定してください
   trust_remote_code: true
   device_map: "auto"
   load_in_8bit: false
@@ -30,7 +30,7 @@ generator:
 tokenizer:
   use_wandb_artifacts: false
   artifacts_path: ""
-  pretrained_model_name_or_path: "kanhatakeyama/0314gpt_mc4_wiki_en_ft" # huggingfaceのupload先を指定してください
+  pretrained_model_name_or_path: "kanhatakeyama/0313gpt_wiki_ft" # huggingfaceのupload先を指定してください
   use_fast: true
 
 # for llm-jp-eval
