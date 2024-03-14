@@ -3,9 +3,9 @@
 #tokenize
 input_jsonl: ../../data/text/0313wiki.jsonl
 output_prefix: ../../data/text/0313tokenized_wiki
-tokenized_data_path: ../../data/text/0313tokenized_text_document
 
 #train
+tokenized_data_path: ../../data/text/0313tokenized_wiki_text_document
 megatron_deepspeed_dir: Megatron-DeepSpeed
 input_tokenizer_file: ../../models/tokenizers/wiki_65k_vocab/tokenizer.model
 output_model_dir: ../../models/pretrain/gpt
@@ -19,7 +19,7 @@ num_attn_heads: 16
 #global_batch_size=256
 global_batch_size: 72              #大きい方が安定するが､大きすぎると cuda out of memory
 global_batch_size: 18              #大きい方が安定するが､大きすぎると cuda out of memory
-global_batch_size: 8              #大きい方が安定するが､大きすぎると cuda out of memory
+global_batch_size: 160              #大きい方が安定するが､大きすぎると cuda out of memory
 lr: 3.0e-4
 min_lr: 1.0e-6
 init_std: 0.018

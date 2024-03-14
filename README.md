@@ -19,6 +19,7 @@ sudo docker build -t llm .
 
 #1回目の実行
 sudo docker run --gpus all -it -p 8899:8888 -v .:/home/llm llm bash
+sudo docker run --gpus all --shm-size='1gb' -it -p 8899:8888 -v .:/home/llm llm bash
 
 #2回目以降
 sudo docker start -i ...
@@ -28,8 +29,11 @@ sudo chmod -R 777 llm
 cd llm/
 conda activate scr
 
-#初回起動時はこれをやる
+#初回起動時は以下のsetup scriptを実行します｡
 bash docker_setup.sh
+
+#huggingfaceもログインします
+huggingface-cli login
 
 ~~~
 

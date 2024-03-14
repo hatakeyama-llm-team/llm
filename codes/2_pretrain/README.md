@@ -42,10 +42,12 @@ python count_tokens.py
 bash 3_train_node1.sh
 ~~~
 
-## モデル変換
-- [converrt_configを開く](./convert_config.yaml)
-- input_model_dirに､最新のモデルのcheckpointのディレクトリを指定する
-  - -[ここから探す](../../models/gpt/checkpoint/)
+## HuggingFace形式へのモデル変換
+- 無事に学習がおわると､[こちら](../../models/pretrain/gpt/checkpoint/)フォルダ内にモデルデータ群が生成されます｡
+  - この中から､最新のcheckpointなどを選びます
+  - [converrt_config](./convert_config.yaml)を開き､設定します｡
+    - input_model_dir: checkpointのフォルダ
+    - output_tokenizer_and_model_dir: huggingfaceのレポにuploadする際の名前
 ~~~
 bash 4_convert_to_HF.sh
 ~~~
