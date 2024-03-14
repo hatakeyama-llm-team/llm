@@ -5,7 +5,7 @@
 - 標準コード
   - https://github.com/matsuolab/ucllm_nedo_prod
 
-# Dockerで環境構築する場合
+# Dockerで環境構築する場合(ファインチューニングまで動作確認済み)
 - Dockefile made by ssone
 - 数十分はかかります｡
 ~~~
@@ -32,8 +32,9 @@ conda activate scr
 #初回起動時は以下のsetup scriptを実行します｡
 bash docker_setup.sh
 
-#huggingfaceもログインします
+#huggingfaceなどもログインします
 huggingface-cli login
+wandb login 
 
 ~~~
 

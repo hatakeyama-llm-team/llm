@@ -34,7 +34,18 @@ pip install flash-attn==2.5.0 --no-build-isolation
 
 git config --global --add safe.directory /home/llm
 
+
 cd ../
 #データ学習時に､読み込みがshuffleされるコードを無効化 (BTMは学習順序が大切なので｡)
 cp codes/2_pretrain/original_codes/gpt_dataset.py codes/2_pretrain/Megatron-DeepSpeed/megatron/data/gpt_dataset.py
+
+cd codes/3_finetune
+git config --global --add safe.directory /home/llm/codes/3_finetune/llm-jp-sft
+# mainブランチではエラーが起きる場合があるため、指定のタグにチェックアウト。
+git clone https://github.com/hotsuyuki/llm-jp-sft
+cd llm-jp-sft
+git fetch origin
+git checkout refs/tags/ucllm_nedo_dev_v20240208.1.0
+
+
 
