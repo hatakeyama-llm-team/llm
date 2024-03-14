@@ -7,6 +7,7 @@
 
 # Dockerで環境構築する場合
 - Dockefile made by ssone
+- 数十分はかかります｡
 ~~~
 sudo docker build -t llm .
 ~~~
