@@ -168,3 +168,4 @@ wandb
 codes/4_eval/llm-leaderboard/artifacts
 codes/4_eval/llm-leaderboard/FastChat
 llm-jp-sft
+nohup.out

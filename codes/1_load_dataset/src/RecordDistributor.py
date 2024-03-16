@@ -97,8 +97,11 @@ class RecordDistributor:
 
                     # frequency
                     if frequency*self.batch_size > batch_cnt:
-                        text = next(dataset_info["dataset_iterator"])
-                        text_list.append(text["text"])
+                        try:
+                            text = next(dataset_info["dataset_iterator"])
+                            text_list.append(text["text"])
+                        except Exception as e:
+                            print(e)
 
                 # バッチにデータが溜まったら、シャッフルして書き出す
                 if batch_cnt == self.batch_size-1:

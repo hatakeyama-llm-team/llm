@@ -47,13 +47,17 @@ dataset_dict = {
     "wiki(ja)": {
         "loader": wiki_ja_loader, #日本語版のwikipediaのloaderを使います｡
         "n_records": max_records, #最大件数
-        "stage_ratio": [1, 1, 9],  # 各ステージでのデータ配分
+        "stage_ratio": [1, 1, 1,8],  # 各ステージでのデータ配分
     },
-
     "wiki(en)": {
         "loader": wiki_en_loader,
         "n_records": max_records,
-        "stage_ratio": [1, 9, 1],
+        "stage_ratio": [1, 8, 1,1],
+    },
+    "mc4(ja)": {
+        "loader": mc4_ja_part_loader,
+        "n_records": max_records,
+        "stage_ratio": [1, 1, 8,1],  # 各ステージでのデータ配分
     },
 }
 

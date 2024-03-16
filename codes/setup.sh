@@ -84,7 +84,7 @@ cp codes/2_pretrain/original_codes/gpt_dataset.py codes/2_pretrain/Megatron-Deep
 #eval
 #evalように新しく環境を作る
 cd 4_eval
-#git clone https://github.com/matsuolab/llm-leaderboard.git
+git clone https://github.com/matsuolab/llm-leaderboard.git
 
 conda create -n llmeval python=3.11 -y
 conda activate llmeval

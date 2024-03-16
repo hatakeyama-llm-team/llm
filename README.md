@@ -21,9 +21,9 @@ sudo docker build -t llm .
 sudo docker run --gpus all --shm-size='1gb' -it -p 8899:8888 -v .:/home/llm llm bash
 
 #2回目以降
-sudo docker start -i ...
+sudo docker start ...
 
-
+#dockerに入ったら行うコマンド
 sudo chmod -R 777 llm
 cd llm/
 conda activate scr
