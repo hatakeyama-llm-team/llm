@@ -38,6 +38,13 @@ python count_tokens.py
     - 300Mでは72 (zero stage 1)で75 GB x2 
 - 一番初めの実行はcompile?が入るようで､時間がかかります｡
 
+- wandbを使うように設定を変更します。
+  - project名は、[config](./original_codes/ds_config_gpt_TEMPLATE.json)のwandb-projectから変更してください。
+~~~
+cp original_codes/ds_config_gpt_TEMPLATE.json Megatron-DeepSpeed/examples_deepspeed/rebase/ds_config_gpt_TEMPLATE.json
+~~~
+
+- 学習の実行
 ~~~
 bash 3_train_node1.sh
 ~~~
