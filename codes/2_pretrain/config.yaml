@@ -1,14 +1,14 @@
 #data configs
 
 #tokenize
-input_jsonl: ../../data/text/0315texts.jsonl
-output_prefix: ../../data/text/0315texts
+input_jsonl: ../../data/text/0318longer_eng.jsonl
+output_prefix: ../../data/text/0318longer_eng
 
 #train
-tokenized_data_path: ../../data/text/0315texts_text_document
+tokenized_data_path: ../../data/text/0318longer_eng_text_document
 megatron_deepspeed_dir: Megatron-DeepSpeed
-input_tokenizer_file: ../../models/tokenizers/0315texts_65k_vocab/tokenizer.model
-output_model_dir: ../../models/pretrain/gpt
+input_tokenizer_file: ../../models/tokenizers/0318longer_eng/tokenizer.model
+output_model_dir: ../../models/pretrain/0318longer_eng
 save_interval: 6000
 
 #model params

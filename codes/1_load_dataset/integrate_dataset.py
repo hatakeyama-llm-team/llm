@@ -21,7 +21,7 @@ make_dir("../../data/text")
 with open('config.yaml', 'r') as file:
     conf = yaml.safe_load(file)
 output_path = conf["output_path"]
-max_records = conf["max_records"]
+#max_records = conf["max_records"]
 print(conf)
 
 
@@ -43,21 +43,22 @@ wiki(en): [1,9,1]
 このようなステージ分けをすることで､一種のカリキュラム学習を行うことが出来ます
 """
 
+
 dataset_dict = {
     "wiki(ja)": {
         "loader": wiki_ja_loader, #日本語版のwikipediaのloaderを使います｡
-        "n_records": max_records, #最大件数
+        "n_records": 1200000, #最大件数
         "stage_ratio": [1, 1, 1,8],  # 各ステージでのデータ配分
     },
     "wiki(en)": {
         "loader": wiki_en_loader,
-        "n_records": max_records,
-        "stage_ratio": [1, 8, 1,1],
+        "n_records": 3600000,
+        "stage_ratio": [0.25, 7, 1,0.25],
     },
     "mc4(ja)": {
         "loader": mc4_ja_part_loader,
-        "n_records": max_records,
-        "stage_ratio": [1, 1, 8,1],  # 各ステージでのデータ配分
+        "n_records": 2400000,
+        "stage_ratio": [0.5, 1, 8,0.5],  # 各ステージでのデータ配分
     },
 }
 

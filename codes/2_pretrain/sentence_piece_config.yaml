@@ -1,5 +1,5 @@
-input: ../../data/text/0315texts.jsonl
-output_dir: ../../models/tokenizers/0315texts_65k_vocab
+input: ../../data/text/0318longer_eng.jsonl
+output_dir: ../../models/tokenizers/0318longer_eng
 vocab_size: 65000
 num_threads: 32
 model_prefix: tokenizer
