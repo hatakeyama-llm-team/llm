@@ -4,6 +4,9 @@
 conda create -n scr python=3.11 -y
 conda activate scr
 
+#cuda
+conda install nvidia/label/cuda-11.8.0::cuda-toolkit -y
+
 #torch類のinstall
 pip install torch==2.0.1+cu118 torchaudio==2.0.2+cu118 torchvision==0.15.2+cu118 --find-links https://download.pytorch.org/whl/torch_stable.html
 
