@@ -46,7 +46,8 @@ wiki(en): [1,9,1]
 
 dataset_dict = {
     "wiki(ja)": {
-        "loader": wiki_ja_loader, #日本語版のwikipediaのloaderを使います｡
+        #"loader": wiki_ja_loader, #日本語版のwikipediaのloaderを使います｡
+        "loader": cleaned_wiki_loader, #日本語版のwikipediaのloaderを使います｡
         "n_records": 1200000, #最大件数
         "stage_ratio": [1, 1, 1,8],  # 各ステージでのデータ配分
     },

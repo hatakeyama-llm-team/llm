@@ -1,5 +1,6 @@
 
 from datasets import load_dataset
+from .CleanedJapaneseWikiDataset import CleanedJapaneseWikiDataset
 
 streaming = True
 
@@ -22,3 +23,8 @@ def mc4_ja_part_loader():
                         # data_files="data/train-00000-of-00416-a74a40664a952804.parquet",
                         streaming=streaming,
                         )
+
+def cleaned_wiki_loader():
+    #クリーンされたjapanese wikipedia
+    return CleanedJapaneseWikiDataset(streaming=streaming)
+
