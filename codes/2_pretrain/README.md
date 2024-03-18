@@ -5,6 +5,7 @@
     - input: 学習データ(jsonl)のパス
     - output_dir: 学習したトークナイザーの保存パス
 - Wikipedia 200万文書で15 minほどかかりました｡
+- 40GBの文章で､5 hr(?)ほど
 
 ~~~
 python 1_train_sentencepiece_tokenizer.py 
