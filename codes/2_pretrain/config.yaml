@@ -12,15 +12,15 @@ output_model_dir: ../../models/pretrain/gpt
 save_interval: 3000
 
 #model params
-model_size: 0.35
-num_layers: 24
-hidden_size: 1024
-num_attn_heads: 16
+model_size: 0.125
+num_layers: 12
+hidden_size: 768
+num_attn_heads: 12
 #global_batch_size=256
 global_batch_size: 72              #大きい方が安定するが､大きすぎると cuda out of memory
 global_batch_size: 18              #大きい方が安定するが､大きすぎると cuda out of memory
-global_batch_size: 160              #大きい方が安定するが､大きすぎると cuda out of memory
-lr: 3.0e-4
+global_batch_size: 2              #大きい方が安定するが､大きすぎると cuda out of memory
+lr: 6.0e-4
 min_lr: 1.0e-6
 init_std: 0.018
 
@@ -31,12 +31,11 @@ zero_stage: 1
 
 #token info
 train_tokens: 3600000000 # 3.6 b, 1 epochになるように調整
-train_tokens: 2850000000 # 3.6 b, 1 epochになるように調整
-train_tokens: 144112147
+train_tokens: 13136361
 
-#train samples
+#train samples:　実際はtoken infoで学習が止まるので、あまり気にしなくて良い(十分に大きければ良い)
 train_samples: 300000000 # 300B相当｡ もっと学習させる場合は大きくすること!!
-##ここを適当に大きくしすぎると､必要メモリが増えすぎるので注意｡
+##ここを適当に大きくしすぎると､必要メモリが増えすぎるので注意｡ 
 ##10000*...とかにすると､RAMが600GB必要､みたいになる. 300bなら､以下が目安
 #train_samples=$(( 300 * 1000 * 1000 * 1000 * 2 / ${seq_len} ))
 
