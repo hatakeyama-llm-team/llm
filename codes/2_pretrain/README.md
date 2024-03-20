@@ -5,6 +5,7 @@
     - input: 学習データ(jsonl)のパス
     - output_dir: 学習したトークナイザーの保存パス
 - Wikipedia 200万文書で15 minほどかかりました｡
+- 40GBの文章で､5 hr(?)ほど
 
 ~~~
 python 1_train_sentencepiece_tokenizer.py 
@@ -48,6 +49,18 @@ cp original_codes/ds_config_gpt_TEMPLATE.json Megatron-DeepSpeed/examples_deepsp
 ~~~
 bash 3_train_node1.sh
 ~~~
+
+
+### エラー対策
+- 事前学習スクリプトが "> compiling and loading fused kernels ..." というところでスタック
+  - DeepSpeedのfused_kernelのbuildをやり直すため、一旦、削除する
+~~~
+rm -rf Megatron-DeepSpeed/megatron/fused_kernels/build/
+~~~
+- -9でプロセスがkill
+  - メモリ(RAM)不足なので、config.yamlのtrain_samplesを小さくする
+- cuda out of memory
+  - GPUメモリ(VRAM)不足なので、config.yamlのglobal_batch_sizeを小さくする  
 
 ## HuggingFace形式へのモデル変換
 - 無事に学習がおわると､[こちら](../../models/pretrain/gpt/checkpoint/)フォルダ内にモデルデータ群が生成されます｡
