@@ -10,6 +10,7 @@
 - 数十分はかかります｡
 ~~~
 git clone https://github.com/hatakeyama-llm-team/llm.git
+cd llm
 sudo docker build -t llm .
 ~~~
 

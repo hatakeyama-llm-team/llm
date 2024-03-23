@@ -14,6 +14,7 @@ class MoEWrapper(GPT2Model):
     _skip_keys_device_placement = "past_key_values"
 
     verbose=True
+    fix_mode=False
 
     def __init__(self, *inputs, **kwargs):
         super().__init__(*inputs, **kwargs)
@@ -35,6 +36,12 @@ class MoEWrapper(GPT2Model):
             ppl_list.append(perplexity(model,tokenized_input))
         return np.array(ppl_list)
 
+    def fix_model(self,model_id):
+        self.set_model_id(model_id)
+        self.fix_mode=True
+
+    def set_flexible_mode(self):
+        self.fix_mode=False
 
     # wrapper functions
     #def forward(self,*args, **kwargs):
@@ -44,13 +51,14 @@ class MoEWrapper(GPT2Model):
     def generate(self,input_ids, attention_mask,
                   **generate_kwargs):
 
-        ppl_array=self.calc_perplexity(input_ids)
-        best_model_id=np.where(ppl_array==min(ppl_array))[0][0]
-        self.set_model_id(best_model_id)
- 
-        if self.verbose:
-            print(f"model {best_model_id} will be used")
-            print("ppl array: ",ppl_array)
+        if not self.fix_mode:
+            ppl_array=self.calc_perplexity(input_ids)
+            best_model_id=np.where(ppl_array==min(ppl_array))[0][0]
+            self.set_model_id(best_model_id)
+    
+            if self.verbose:
+                print(f"model {best_model_id} will be used")
+                print("ppl array: ",ppl_array)
 
 
         ret=self.model.generate(input_ids=input_ids, 
