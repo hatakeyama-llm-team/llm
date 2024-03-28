@@ -67,8 +67,9 @@ class MoEWrapper(GPT2Model):
         return ret
 
 
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 def perplexity(model, tokenized_input) -> torch.Tensor:
     with torch.inference_mode():
-        output = model(tokenized_input, labels=tokenized_input)
+        output = model(tokenized_input.to(device), labels=tokenized_input)
     ppl = torch.exp(output.loss)
     return ppl.item()
