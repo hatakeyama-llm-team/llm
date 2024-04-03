@@ -40,8 +40,6 @@ echo "Learning Rate: $lr"
 echo "Minimum Learning Rate: $min_lr"
 echo "Init Std: $init_std"
 echo "Seq len: $seq_len"
-
-
 ###############################################################################
 ### Training duration configs
 ## The main termination condition, original GPT-3 paper trains for 300B tokens.
@@ -91,6 +89,7 @@ lr_warmup_tokens=$((${lr_warmup_tokens_in_million} * 1000 * 1000))
 lr_decay_tokens_in_billion=${train_tokens_in_billion}
 lr_decay_tokens=$((${lr_decay_tokens_in_billion} * 1000 * 1000 * 1000))
 lr_decay_style="cosine"
+
 ###############################################################################
 ### Parallelism configs
 ## Model parallelism, 1 is no MP
@@ -116,7 +115,7 @@ zero_stage=$(yq -e '.zero_stage' config.yaml)
 ## Total number of GPUs.
 num_gpus_pernode=$(nvidia-smi --query-gpu=name --format=csv,noheader | wc -l)
 #num_gpus_pernode=1
-#NHOSTS=1
+NHOSTS=1
 num_node="${NHOSTS}"
 num_gpus=$((${num_gpus_pernode} * ${num_node}))
 ## Data parallel size.
@@ -158,8 +157,6 @@ host="${HOSTNAME}"
 seed=1234
 num_workers=0
 
-
-
 prescale_grad="true"
 jobname="gpt_${model_size}B_tok${train_tokens_in_billion}B"
 jobname="${jobname}_lr${lr}_min${min_lr}_w${lr_warmup_tokens_in_million}M_d${lr_decay_tokens_in_billion}B_${lr_decay_style}"
@@ -185,6 +182,7 @@ mkdir -p ${log_path}
 mkdir -p ${checkpoint_path}
 mkdir -p ${tensorboard_path}
 mkdir -p ${deepspeed_config_dir}
+
 ###############################################################################
 data_options=" \
     --tokenizer-type SentencePieceTokenizer \
@@ -290,14 +288,25 @@ if [[ $iteration -gt 0 ]]; then
     ds_ssh "echo $iteration_2 > $iteration_file_2"
 fi
 
-# new commands for multi node
+echo creating host file
+
 # Creates a hostfile.
 script_dir=$(dirname "$0")
-hostfile="${script_dir}/hostfile_jobid-${JOB_ID}"
-while read -r line
+hostfile="${script_dir}/hostfile_jobid-${SLURM_JOB_ID}"
+nodes=$(scontrol show hostnames $SLURM_JOB_NODELIST)
+
+echo $nodes
+for node in $nodes
 do
-  echo "${line} slots=$(nvidia-smi --query-gpu=name --format=csv,noheader | wc -l)"
-done < "${SGE_JOB_HOSTLIST}" > "${hostfile}"
+  echo begin ssh...
+  gpu_count=$(ssh ${node} "nvidia-smi --query-gpu=name --format=csv,noheader | wc -l")
+  echo gpu count: $gpu_count
+  echo "${node} slots=${gpu_count}"
+  ssh $node "source ~/.bashrc"
+  ssh $node 'source /persistentshare/storage/team_hatakeyama/hatakeyama/miniconda3/etc/profile.d/conda.sh && conda activate .venv'
+  #ssh $node 'source ~/miniconda3/etc/profile.d/conda.sh && conda activate .venv'
+done > "${hostfile}"
+
 echo "hostfile = ${hostfile}"
 cat ${hostfile}
 echo ""
