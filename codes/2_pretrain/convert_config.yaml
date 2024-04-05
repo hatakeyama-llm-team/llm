@@ -1,4 +1,4 @@
-input_model_dir: ../../models/pretrain/0405clean_ja/checkpoint/gpt_0.125B_tok300B_lr0.0006_min1e-06_w3000M_d300B_cosine_gbs128_mbs16_g8_pp1_seed1234_rebase/global_step4844
-output_tokenizer_and_model_dir: ../../models/hf/0405_100m_clean_ja
+input_model_dir: ../../models/pretrain/0405clean_ja_2700m/checkpoint/gpt_2.7B_tok300B_lr0.00016_min1e-06_w3000M_d300B_cosine_gbs72_mbs9_g8_z1_pp1_seed1234_rebase
+output_tokenizer_and_model_dir: ../../models/hf/0405_2700m_clean_ja
 huggingface_name: 0405_100m_clean_ja
 test_prompt_text: こんにちは､

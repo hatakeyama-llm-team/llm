@@ -13,7 +13,7 @@ def perplexity(model, tokenizer, text) -> torch.Tensor:
     ppl = torch.exp(output.loss)
     return ppl.item()
     
-class PerplexityMoE:
+class MoEPipe:
     def __init__(self,max_new_tokens=100,
     repetition_penalty=1.5
     ):
