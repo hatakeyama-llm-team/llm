@@ -20,10 +20,6 @@ hidden_size: 2560
 lr: 1.6e-4
 init_std: 0.011
 
-
-#global_batch_size=256
-#global_batch_size: 72              #大きい方が安定するが､大きすぎると cuda out of memory
-#global_batch_size: 18              #大きい方が安定するが､大きすぎると cuda out of memory
 global_batch_size: 72             #大きい方が安定するが､大きすぎると cuda out of memory
 min_lr: 1.0e-6
 

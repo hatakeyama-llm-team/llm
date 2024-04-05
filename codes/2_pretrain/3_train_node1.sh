@@ -41,102 +41,6 @@ echo "Minimum Learning Rate: $min_lr"
 echo "Init Std: $init_std"
 echo "Seq len: $seq_len"
 
-###############################################################################
-### Main configs
-## GPT-3 models use 2K sequence length/context window
-
-## The "GPT-3 XXX" below are configs from GPT-3 paper
-## https://arxiv.org/abs/2005.14165, choose based on
-## your desired model size or build your own configs
-
-## init_std is standard deviation for weight initialization. Usually larger
-## model needs lower std. We used a heuristic equation of sqrt(1/3/hidden_size)
-## from the MT-NLG 530B work (https://arxiv.org/pdf/2201.11990.pdf)
-
-## We changed min_lr to a lower number (1.0e-6), which we found is able to
-## provide better zero-shot eval results.
-
-## GPT-3 Small 125M
-#model_size=0.125
-#num_layers=12
-#hidden_size=768
-#num_attn_heads=12
-#global_batch_size=256
-#global_batch_size=128              #大きい方が安定するが､大きすぎると cuda out of memory
-#global_batch_size=32              #大きい方が安定するが､大きすぎると cuda out of memory
-#lr=6.0e-4
-#min_lr=1.0e-6
-#init_std=0.02
-
-## GPT-3 Medium 350M
-# model_size=0.35
-# num_layers=24
-# hidden_size=1024
-# num_attn_heads=16
-# global_batch_size=256
-# lr=3.0e-4
-# min_lr=1.0e-6
-# init_std=0.018
-
-## GPT-3 Large 760M
-# model_size=0.76
-# num_layers=24
-# hidden_size=1536
-# num_attn_heads=16
-# global_batch_size=256
-# lr=2.5e-4
-# min_lr=1.0e-6
-# init_std=0.015
-
-## GPT-3 XL 1.3B
-# model_size=1.3
-# num_layers=24
-# hidden_size=2048
-# num_attn_heads=16
-# global_batch_size=512
-# lr=2.0e-4
-# min_lr=1.0e-6
-# init_std=0.013
-
-## GPT-3 2.7B
-# model_size=2.7
-# num_layers=32
-# hidden_size=2560
-# num_attn_heads=32
-# global_batch_size=512
-# lr=1.6e-4
-# min_lr=1.0e-6
-# init_std=0.011
-
-## GPT-3 6.7B
-# model_size=6.7
-# num_layers=32
-# hidden_size=4096
-# num_attn_heads=32
-# global_batch_size=1024
-# lr=1.2e-4
-# min_lr=1.0e-6
-# init_std=0.009
-
-## GPT-3 13B
-# model_size=13
-# num_layers=40
-# hidden_size=5120
-# num_attn_heads=40
-# global_batch_size=1024
-# lr=1.0e-4
-# min_lr=1.0e-6
-# init_std=0.008
-
-## GPT-3 175B
-# model_size=175
-# num_layers=96
-# hidden_size=12288
-# num_attn_heads=96
-# global_batch_size=1536
-# lr=0.6e-4
-# min_lr=1.0e-6
-# init_std=0.005
 
 ###############################################################################
 ### Training duration configs
@@ -386,6 +290,7 @@ if [[ $iteration -gt 0 ]]; then
     ds_ssh "echo $iteration_2 > $iteration_file_2"
 fi
 echo "${megatron_options}"
+echo "start training..."
 deepspeed ${megatron_deepspeed_dir}/pretrain_gpt.py \
     ${megatron_options} \
     ${data_options} \

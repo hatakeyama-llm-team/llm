@@ -8,24 +8,23 @@ output_prefix: ../../data/text/0323cc_wiki
 tokenized_data_path: ../../data/text/0405clean_ja
 megatron_deepspeed_dir: Megatron-DeepSpeed
 input_tokenizer_file: ../../models/tokenizers/0405clean_ja/tokenizer.model
-output_model_dir: ../../models/pretrain/0405clean_ja_2700m
+output_model_dir: ../../models/pretrain/0405clean_ja
 save_interval: 12000
 
 
 #model params
-model_size: 2.7
-num_layers: 32
-hidden_size: 2560
-num_attn_heads: 32
-global_batch_size: 72             #大きい方が安定するが､大きすぎると cuda out of memory
-lr: 1.6e-4
+model_size: 0.125
+num_layers: 12
+hidden_size: 768
+num_attn_heads: 12
+global_batch_size: 128              #大きい方が安定するが､大きすぎると cuda out of memory
+lr: 6.0e-4
 min_lr: 1.0e-6
-init_std: 0.011
+init_std: 0.02
 seq_len: 2048
 
-
 #deepspeed
-zero_stage: 1
+zero_stage: 0
 
 #token info
 #train_tokens: 144112147
