@@ -29,6 +29,7 @@ class MoEPipe:
         pipe=pipeline("text-generation",model=model,tokenizer=tokenizer,
                       max_new_tokens=self.max_new_tokens,
                       repetition_penalty=self.repetition_penalty,
+                     pad_token_id=50256,
                       )
         self.models.append((model,tokenizer,pipe))
         self.coef.append(1)
