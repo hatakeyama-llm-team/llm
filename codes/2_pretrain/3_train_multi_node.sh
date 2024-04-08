@@ -86,8 +86,9 @@ lr_warmup_tokens=$((${lr_warmup_tokens_in_million} * 1000 * 1000))
 ## related works (e.g., https://arxiv.org/abs/2203.15556) find that setting the
 ## learning rate schedule to match the number of training tokens results in the
 ## best final model quality 
-lr_decay_tokens_in_billion=${train_tokens_in_billion}
-lr_decay_tokens=$((${lr_decay_tokens_in_billion} * 1000 * 1000 * 1000))
+## lr_decay_tokens_in_billion=${train_tokens_in_billion}
+## lr_decay_tokens=$((${lr_decay_tokens_in_billion} * 1000 * 1000 * 1000))
+lr_decay_tokens_in_billion=$(yq -e '.lr_decay_tokens_in_billion' config.yaml)
 lr_decay_style="cosine"
 
 ###############################################################################
