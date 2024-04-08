@@ -35,10 +35,8 @@ train_tokens: 12955674940
 #char_length
 #26293536540
 #train samples
+#この値をきちんと決めておかないと、learning rateのスケジュラーがきちんと動かない
 train_samples: 300000000 # 300B相当｡ もっと学習させる場合は大きくすること!!
-##ここを適当に大きくしすぎると､必要メモリが増えすぎるので注意｡
-##10000*...とかにすると､RAMが600GB必要､みたいになる. 300bなら､以下が目安
 #train_samples=$(( 300 * 1000 * 1000 * 1000 * 2 / ${seq_len} ))
 
-
-
+lr_decay_tokens_in_billion: 5
