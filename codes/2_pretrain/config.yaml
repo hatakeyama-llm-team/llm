@@ -39,5 +39,7 @@ train_samples: 3000000 # 3B相当｡ もっと学習させる場合は大きく�
 ##10000*...とかにすると､RAMが600GB必要､みたいになる. 300bなら､以下が目安
 #train_samples=$(( 300 * 1000 * 1000 * 1000 * 2 / ${seq_len} ))
 
+#何bから lrを下げるか
+lr_decay_tokens_in_billion: 5
 
 
