@@ -1,14 +1,14 @@
 #data configs
 
 #tokenize
-input_jsonl: ../../data/text/corpus.jsonl
-output_prefix: ../../data/text/0323cc_wiki
+input_jsonl: ../../data/text/test.jsonl
+output_prefix: ../../data/text/0416test
 
 #train
-tokenized_data_path: ../../data/text/0407btm_test
+tokenized_data_path: ../../data/text/0416test_text_document
 megatron_deepspeed_dir: Megatron-DeepSpeed
 input_tokenizer_file: ../../models/tokenizers/0407clean_ja_en/tokenizer.model
-output_model_dir: ../../models/pretrain/0407btm_test
+output_model_dir: ../../models/pretrain/0416test
 save_interval: 5000
 
 

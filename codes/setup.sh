@@ -80,6 +80,8 @@ sudo apt-get install jq -y
 #データ学習時に､読み込みがshuffleされるコードを無効化 (BTMは学習順序が大切なので｡)
 cp codes/2_pretrain/original_codes/gpt_dataset.py codes/2_pretrain/Megatron-DeepSpeed/megatron/data/gpt_dataset.py
 
+#ropeを使う
+cp codes/2_pretrain/original_codes/pretrain_gpt.py codes/2_pretrain/Megatron-DeepSpeed/pretrain_gpt.py
 
 #eval
 #evalように新しく環境を作る
