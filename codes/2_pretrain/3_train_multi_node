@@ -233,9 +233,9 @@ megatron_options=" \
     --log-timers-to-tensorboard \
     --log-batch-size-to-tensorboard \
     --log-validation-ppl-to-tensorboard \
-    --use-rotary-position-embeddings \
     --tensorboard-dir ${tensorboard_path}"
 
+    #--use-rotary-position-embeddings \
 if [ "${activation_checkpoint}" = "true" ]; then
 megatron_options="${megatron_options} \
     --checkpoint-activations"
