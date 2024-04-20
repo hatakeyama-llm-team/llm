@@ -1,15 +1,15 @@
 #data configs
 
 #tokenize
-input_jsonl: ../../data/text/test.jsonl
-output_prefix: ../../data/text/0416test
+input_jsonl: ../../data/text/corpus_scale_200.jsonl
+output_prefix: ../../data/text/0420test
 
 #train
-tokenized_data_path: ../../data/text/0416test_text_document
+tokenized_data_path: ../../data/text/0420test_text_document
 megatron_deepspeed_dir: Megatron-DeepSpeed
-input_tokenizer_file: ../../models/tokenizers/0407clean_ja_en/tokenizer.model
-output_model_dir: ../../models/pretrain/0416test
-save_interval: 5000
+input_tokenizer_file: ../../models/tokenizers/tokenizer_scale200.model
+output_model_dir: ../../models/pretrain/0420test
+save_interval: 500
 
 
 #model params
@@ -24,12 +24,29 @@ init_std: 0.011
 seq_len: 2048
 
 
+#0.1b
+#model params
+model_size: 0.125
+num_layers: 12
+hidden_size: 768
+num_attn_heads: 12
+global_batch_size: 128              #大きい方が安定するが､大きすぎると cuda out of memory
+lr: 6.0e-4
+min_lr: 1.0e-6
+init_std: 0.02
+
+#deepspeed
+zero_stage: 0
+
+
+
 #deepspeed
 zero_stage: 1
 
 #token info
 #train_tokens: 144112147
 train_tokens: 12955674940
+lr_decay_tokens_in_billion: 5
 #tokens in billion
 #12.95567494
 #char_length
@@ -37,6 +54,6 @@ train_tokens: 12955674940
 #train samples
 #この値をきちんと決めておかないと、learning rateのスケジュラーがきちんと動かない
 train_samples: 300000000 # 300B相当｡ もっと学習させる場合は大きくすること!!
+
 #train_samples=$(( 300 * 1000 * 1000 * 1000 * 2 / ${seq_len} ))
 
-lr_decay_tokens_in_billion: 5
