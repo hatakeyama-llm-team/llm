@@ -1,1 +1,0 @@
-# Branch-Train-Mergeのモデル統合の練習をするfolder
