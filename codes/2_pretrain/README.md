@@ -1,28 +1,7 @@
 # 事前学習します
-## 1. tokenizerの学習
-- 設定は[yaml](sentence_piece_config.yaml)をいじります｡
-  - 主な設定項目
-    - input: 学習データ(jsonl)のパス
-    - output_dir: 学習したトークナイザーの保存パス
-- Wikipedia 200万文書で15 minほどかかりました｡
-- 40GBの文章で､5 hr(?)ほど
+- tokenizerの学習や､tokenizeはすべて終わっているものとします
 
-~~~
-python 1_train_sentencepiece_tokenizer.py 
-~~~
-
-- 実行すると､[tokenizers](../../model/tokenizers/)フォルダにmodelとvocabファイルが生成されます
-  - vocabには､語彙が収録されています｡一度見てみるのがオススメです｡
-
-## 2. tokenize
-~~~
-bash 2_tokenize.sh
-~~~
-
-- tokenizeを実行すると､[data](../../data/) folerに､tokenizeされたデータ(例：tokenized_text_document.bin/idx)が生成されます｡
-  - wikipedia記事200万件を処理するのに1000 secほど｡
-
-## 3. pretrain
+## pretrain
 - 学習の前に､データのtoken数を確認しておきます｡
   - 愚直にカウントしています｡もっと早い方法があるはずです｡
 ~~~
