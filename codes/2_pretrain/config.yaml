@@ -1,8 +1,8 @@
 #data configs
 
 #tokenize
-input_jsonl: ../../data/text/corpus_scale_200.jsonl
-output_prefix: ../../data/text/0420test
+input_jsonl: ../../data/text/PMC_ja2_corpus_scale_1.05.jsonl
+output_prefix: ../../data/text/PMC_ja2
 
 #train
 tokenized_data_path: ../../data/text/0420test_text_document
