@@ -1,5 +1,5 @@
-input_model_dir: ../../models/global_step16100
-output_tokenizer_and_model_dir: ../../models/hf/2jaA
+input_model_dir: ../../models/snapshots/step41300
+output_tokenizer_and_model_dir: ../../models/hf/step4130
 huggingface_name: 0405_100m_clean_ja
 test_prompt_text: こんにちは､
 temp_dir: ../../models/temp
