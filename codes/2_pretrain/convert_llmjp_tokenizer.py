@@ -1,3 +1,5 @@
+#https://github.com/llm-jp/llm-jp-tokenizer/blob/main/hf/convert_llmjp_unigram_spm_to_hf_fast.py
+
 from tokenizers import decoders, models, normalizers, processors, Regex, Tokenizer
 import argparse
 import sys
