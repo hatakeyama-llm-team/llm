@@ -25,9 +25,14 @@ mkdir -p ${output_tokenizer_and_model_dir}
 
 echo "converting tokenizers"
 # Converts the tokenizer from SentencePiece format to HuggingFace Transformers format.
-python convert_tokenizer_from_sentencepiece_to_huggingface_transformers.py \
-    --input_tokenizer_file ${input_tokenizer_file} \
-    --output_tokenizer_dir ${output_tokenizer_and_model_dir}
+#python convert_tokenizer_from_sentencepiece_to_huggingface_transformers.py \
+#    --input_tokenizer_file ${input_tokenizer_file} \
+#    --output_tokenizer_dir ${output_tokenizer_and_model_dir}
+#echo ""
+
+python convert_llmjp_tokenizer.py \
+    -i ${input_tokenizer_file} \
+    -o ${output_tokenizer_and_model_dir}
 echo ""
 
 # Converts the pretrained model from Megatron-DeepSpeed format to HuggingFace Transformers format.
