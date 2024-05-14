@@ -1,0 +1,350 @@
+{
+    "llmjp13b": {
+        "富士山は": {
+            "perplexity": 1988.056884765625,
+            "output": "富士山は、日本の象徴として古くから親しまれてきました。その美しい姿をいつまでも後世に伝えたいと思います。"
+        },
+        "化学研究の問題点は": {
+            "perplexity": 191.06161499023438,
+            "output": "化学研究の問題点は、「科学的」な方法論が確立されていないことである。\n"
+        },
+        "Functional polymers are": {
+            "perplexity": 36.15023422241211,
+            "output": "Functional polymers are used in a wide variety of applications, including the manufacture and packaging industries.\nThere is an increasing demand for functionalized polyolefin materials that can be processed into films or fibers with high strength properties while maintaining good processability characteristics such as low viscosity at elevated temperatures during processing. The use of these types of materials has been limited by their poor resistance to degradation caused by exposure to oxygen-containing atmospheres. In particular, it would be desirable to have film compositions having improved oxidative"
+        },
+        "Bioinformatics is": {
+            "perplexity": 13.367486953735352,
+            "output": "Bioinformatics is a bimonthly peer-reviewed scientific journal covering bioinformatics. It was established in 2013 and published by Springer Science+Business Media until it became an open access publication from the beginning of volume 4, issue 5 onwards; this change took effect on January 6th, 2018. The editors are Jianfeng Gao (University College London) and David Haussler (Stanford University"
+        },
+        "フィボナッチ数列を生成するPythonのコードは次のとおりです｡\n def": {
+            "perplexity": 20.4423828125,
+            "output": "フィボナッチ数列を生成するPythonのコードは次のとおりです｡\n def fib(n):  # n番目までの和が1になるような自然数。\n    if n<2 or not 0: return False   # n=0,Falseとすると終了判定されるので、それ以外であれば処理続行。\n    return True                    # そうすれば必ずTrueなので、その場合のみ処理継続。\n\nこの関数では、最初の値として「0」かどうかチェックします（これ"
+        },
+        "ホンダ フィット 販売": {
+            "perplexity": 117.76886749267578,
+            "output": "ホンダ フィット 販売店：オートショップ　タキーズ 年式(初度登録) 2013(平成25)年 走行距離 4.9万km 車検 なし 修復歴 あり 保証 色 パールホワイト 車両価格680,000円 ※リ済別 想定支払総額-- 円 ※支払総額 当社の中古車は全車、納車前に整備を実施しております。ご"
+        },
+        "英語: He is a good man. 日本語: ": {
+            "perplexity": 21.825117111206055,
+            "output": "英語: He is a good man. 日本語: 彼は良い人です。\nHe's not bad at all!（全く悪くないよ！）：「全然」の強調表現で、否定文に用いることが多い。\nI don’t like him very much, but he isn’t that bad either.（私は彼をあまり好きではありませんが、それでも彼もそれほど悪いわけじゃありませんからね。）\nShe doesn't know what she wants to do with her life yet"
+        },
+        "英語: What is the problem of developing LLM in Japan? 日本語: ": {
+            "perplexity": 42.45655059814453,
+            "output": "英語: What is the problem of developing LLM in Japan? 日本語: 日本におけるLL.Mの発展について問題となることは何ですか？\n 英語: How do you think about internationalization and globalization for Japanese law firms?　日本語：日本法事務所が国際化及びグローバル化をどのように考えていますか。\n"
+        },
+        "Q: 日本の首都は? A:": {
+            "perplexity": 29.82723617553711,
+            "output": "Q: 日本の首都は? A:東京です。Q. 日本で一番高い山は？A：富士山です。Q．日本には何があるか知っている人いますか？A：寿司、ラーメンなどたくさんありますよ！Q.　日本人と中国人ではどちらが好きですか？A：私たちは同じアジア人なのでどっちもいいですね～（笑）Q.　あなたにとって日本ってどんな国だと思いますか？A：とてもきれいなところだし、食べ物や文化"
+        },
+        "Q: ドラえもんの友達は? A:": {
+            "perplexity": 77.4532241821289,
+            "output": "Q: ドラえもんの友達は? A:のび太、しずかちゃん、ジャイアン。Q:好きな食べ物と嫌いな食べ物を教えてください!A：好きなもの→ハンバーグ・オムライスなど洋食系全般　嫌いな物→ピーマンやパプリカ等緑色した野菜類(苦いから)Q:得意料理ってありますか？A:特にないですね…。Q:苦手なこととかあるんですか？A:人見知りが激しいので初対面だと緊張してしまい"
+        },
+        "Q: 純粋理性批判はたぬきに理解できますか? A:": {
+            "perplexity": 30.01373863220215,
+            "output": "Q: 純粋理性批判はたぬきに理解できますか? A: 無理です。Q. カントの「実践理性」と、ヘーゲルの「精神現象学」を比較してみてください。A. どちらも哲学的な概念でありながら、まったく異なるものだということがわかりましたね？　これこそまさに、二元論なのです！"
+        },
+        "Q: ChatGPTとはなんですか? A:": {
+            "perplexity": 25.54574966430664,
+            "output": "Q: ChatGPTとはなんですか? A: Googleが開発した人工知能です。Q. チャットボットのメリットを教えてくださいA：人間に代わって、自動で会話してくれることです。Q. チャットボットにはどんな種類がありますか？A: 大きく分けて2つあります。1つ目は「対話型」タイプです。これはユーザーから質問された内容に対して回答するものです。例えば、天気予報やニュースなどについて答えたりします。もう一つは"
+        },
+        "Q: 俳句を書いてください A:": {
+            "perplexity": 59.66133117675781,
+            "output": "Q: 俳句を書いてください A: 私は、あなたが何かについて考えていることに興味があります。 B: それならば、この句の意味するところを説明してくれませんか？ C: そのようなものではないと思いますよ。 D. 2019/07/31 · 「俳句」という言葉からどんなイメージを思い浮かべるだろうか。五・七・五で構成された短い詩や短歌など"
+        },
+        "Q: 日本の総理大臣は? A:": {
+            "perplexity": 29.349088668823242,
+            "output": "Q: 日本の総理大臣は? A: 安倍晋三。Q. アメリカ大統領は？A：トランプ氏ですね！（笑）Q．世界で一番有名な日本人って誰だと思いますか？A:　イチロー選手、本田圭佑選手などが挙げられていました。Q. あなたにとって「夢」を叶えるために必要不可欠なものは何ですか？A: 自分自身への自信や信念・情熱といったマインドセットも大切ですが、それ以上に重要な"
+        }
+    },
+    "1_step30800": {
+        "富士山は": {
+            "perplexity": 16501.78125,
+            "output": "富士山は、日本百名山のひとつです。\nこの時期になると、多くの人が「富士」という言葉を耳にするようになりました。しかし、その意味するところは、「富士」と「富士」の間にある「富士」という文字で、本来なら「富士」という漢字を冠した言葉として使われています。\nそして、富士山麓には富士山神社があります。富士山神社は、富士山麓の富士山麓にあり、富士山麓の富士山麓には富士山神社があり、富士山麓"
+        },
+        "化学研究の問題点は": {
+            "perplexity": 285.2082824707031,
+            "output": "化学研究の問題点は、その解決法を開発する過程で得られるものであり、科学者が実験に参加し、科学的な分析と理論的な検証によって解決することである。\nこのような方法論は、科学者にとって非常に有効なものである。しかしながら、科学者にはそれができないのである。科学者は、科学者自身が科学者としての立場から見た「科学」という概念を持っているかどうかについて、科学者自身が"
+        },
+        "Functional polymers are": {
+            "perplexity": 94.77851867675781,
+            "output": "Functional polymers are widely used in the field of biomedicine, and their application is mainly focused on drug delivery systems. They have been extensively studied for use as carriers to deliver drugs or genes into cells [1]. Polysaccharide-based nanocarriers can be obtained by chemical modification of polysaccharides with functional groups such as amino, hydroxyl, carboxylic acid, etc. These modified polysaccharides can form complexes with other substances through hydrogen bonds, electrostatic interactions, hydrophobic"
+        },
+        "Bioinformatics is": {
+            "perplexity": 10.642742156982422,
+            "output": "Bioinformatics is a rapidly growing field that has been used to analyze the genome, transcriptome and proteome of organisms. The term 'bioinformatics' was first coined by George Church in 1953 [2]. It can be described as \"the science of information processing\" or \"the study of algorithms for analyzing data\". In other words, it deals with computer-based techniques which are used to process large amounts of data from various fields such as biology"
+        },
+        "フィボナッチ数列を生成するPythonのコードは次のとおりです｡\n def": {
+            "perplexity": 173.45977783203125,
+            "output": "フィボナッチ数列を生成するPythonのコードは次のとおりです｡\n def __init__(self) { self.set_length(int); } int length = 1; } The above code is a Python function that returns the value of the variable'self' after it has been initialized with an integer value of'self'. This function will then be called for each iteration in the loop, and this process repeats until all values are returned to the caller. In order to avoid any possible confusion between the actual implementation of the algorithm and its description here, we"
+        },
+        "ホンダ フィット 販売": {
+            "perplexity": 29011.9765625,
+            "output": "ホンダ フィット 販売店は、1980年にスタートした。\n2005年には、日本で初めての二輪車「カローラスポーツ」を発売するなど、国内外から多くの人が愛用している。また、2006年には、日本初の軽自動車「カローラR-3000」を発表し、その人気ぶりを世界中に広めた。\n2014年には、「カローラスポーツ」と「クラウンスポーツ」"
+        },
+        "英語: He is a good man. 日本語: ": {
+            "perplexity": 48.53822326660156,
+            "output": "英語: He is a good man. 日本語: 实长, 叭时候, 卜说, 则是, 击是, 吃是, �����是, 关是, 冲是, 动是, 她是。\n(1) They are all very kind and they have the same feelings as he does. (2) I am"
+        },
+        "英語: What is the problem of developing LLM in Japan? 日本語: ": {
+            "perplexity": 79.26290893554688,
+            "output": "英語: What is the problem of developing LLM in Japan? 日本語: 尔语(English) 很时(Japanese) 变认(Chinese) 听隼(Korean) 喻红(Korean) 啟頌(Korean) 哪馆(Korean) 囙馆(Korean) 峂馆(Korean) ����"
+        },
+        "Q: 日本の首都は? A:": {
+            "perplexity": 252.19627380371094,
+            "output": "Q: 日本の首都は? A:日本の都市は、東京と同じくらいにある。\nQ:日本にはどのような都市があるのですか?\nA:東京と比べて地方都市が多い。\nQ:日本にはどのような文化がありますか?\nA:日本には様々な文化があります。\nQ:日本にはどのような生活をしていますか?\nA:日本には様々な生活があります。\nQ:日本にはどのような生活習慣がありますか?\nA:日本には様"
+        },
+        "Q: ドラえもんの友達は? A:": {
+            "perplexity": 215.35877990722656,
+            "output": "Q: ドラえもんの友達は? A: 友達がいるから、私も一緒に行って。\nQ: ドラえもんの友達は誰?\nA: ドラえもんの友達は誰だ?\nQ: ドラえもんの友達は誰?\nA: ドラえもんの友達は誰だ?\nQ: ドラえもんの友達は誰だ?\nA: ドラえもんの友達は誰だ?\nQ: ドラえもんの友達は"
+        },
+        "Q: 純粋理性批判はたぬきに理解できますか? A:": {
+            "perplexity": 207.4448699951172,
+            "output": "Q: 純粋理性批判はたぬきに理解できますか? A:いいえ、それは私の考え方です。\nQ:あなたが「純粋」と感じる理由を教えてください。\nA:そうですね。\nQ:「純潔」という言葉には、「純潔感」という意味があります。「純潔感」というのは、自分自身の中で存在するものであり、その存在そのものであるということを示すものです。つまり、純潔感というものは、自分自身の中でも存在しているということなのです。ですから、純潔感というものは、自分"
+        },
+        "Q: ChatGPTとはなんですか? A:": {
+            "perplexity": 334.5918884277344,
+            "output": "Q: ChatGPTとはなんですか? A: I think it is a good idea to use chatbots in the classroom.\nQ: What are some of the advantages and disadvantages of using chatbots in the classroom? A: It can be used as an alternative way for students to learn English, especially when they have difficulties with grammar or vocabulary. However, there are also disadvantages such as misunderstanding between teachers and students because of the lack of human contact.\nQ: Do you agree that chatbot"
+        },
+        "Q: 俳句を書いてください A:": {
+            "perplexity": 518.8911743164062,
+            "output": "Q: 俳句を書いてください A:私は、この世界の人々に、心から感謝しています。\nQ:あなたがたには、どんな思いがありますか?\nA:私たちは、自分自身で考える力を持っています。\nQ:あなたの人生について教えてください。\nA:私たちにとっては、人生において大きな意味があるでしょう。\nQ:あなたがたにとって、どのような存在であるでしょうか?\nA:私たちが生きている限り、誰も幸せになれません。\nQ"
+        },
+        "Q: 日本の総理大臣は? A:": {
+            "perplexity": 173.94564819335938,
+            "output": "Q: 日本の総理大臣は? A:日本の首相が、日本国民を代表して内閣に出席するという意図で、日本政府と外務省の官僚組織を作った。その中には、日本国民の意思や行動に対しても従うべき姿勢があった。\nQ:日本の国益について何か考える必要があるのですか?\nA:日本の国益というのは、国家としての役割ではなく、個人としての役割です。個人としての役割は、国家"
+        }
+    },
+    "2_step37800": {
+        "富士山は": {
+            "perplexity": 727.652587890625,
+            "output": "富士山は、日本の象徴であり、日本人にとって最も身近な存在です。\n2018/7/31(日)午前9:46 2015年に開催された「第1回全国ふるさと甲子園」でグランプリを受賞した静岡県沼津市のご当地グルメが、「B-1グランプリin豊川」でも大人気!その名も『ひもかわうどん』。地元では昔から親しまれている郷土料理ですが、今"
+        },
+        "化学研究の問題点は": {
+            "perplexity": 187.17861938476562,
+            "output": "化学研究の問題点は、そのほとんどが「自然界に存在する物質を使って何ができるのか」という問いに対して答えられないことである。\n例えば、「水素と酸素から水ができる」「炭素と窒素でプラスチックができた」などといった話はよく聞くし、実際に実験も行われているだろう。しかし、これらの反応式や理論的な説明については誰でも知っているはずだ。ところが、このような反応系では、どの"
+        },
+        "Functional polymers are": {
+            "perplexity": 71.23529052734375,
+            "output": "Functional polymers are widely used in the biomedical field, such as drug delivery systems and tissue engineering. They can be classified into two categories: natural polymers (e.g. collagen) or synthetic polymers [1]. Natural polymers have been extensively studied due to their biocompatibility, non-immunogenicity, low cost, high mechanical strength, and easy processing [2][3][4]. However, they suffer from poor water solubility, which limits their application in pharmaceutical"
+        },
+        "Bioinformatics is": {
+            "perplexity": 20.30417251586914,
+            "output": "Bioinformatics is a multidisciplinary field that integrates computer science, biology and medicine. It aims to analyze the complexity of biological systems by using computational methods (1). The main goal of bioinformatics is to understand how genes interact with each other in order to gain knowledge about their functions and roles in disease development or progression (2)(3)(4).\nThe first step towards understanding gene function is to identify all possible interactions between genes. This can be done through experimental techniques"
+        },
+        "フィボナッチ数列を生成するPythonのコードは次のとおりです｡\n def": {
+            "perplexity": 60.686134338378906,
+            "output": "フィボナッチ数列を生成するPythonのコードは次のとおりです｡\n def f(x)=1/2+1/3 x; /*最初に0.5と1が出力される。\n int main(){\nf(); /*関数宣言、コンストラクターで定義された変数を初期化し、配列new_permutations[4]からランダムな数字を取り出す。\nreturn new_permutations[4]; /*戻り値として配列new_permutations[4]を返す。\n}\nビルド実行結果"
+        },
+        "ホンダ フィット 販売": {
+            "perplexity": 3488.734130859375,
+            "output": "ホンダ フィット 販売台数10万台突破!\n2013年9月に発売された、ホンダのコンパクトカー「フィット」が好調だ。この夏には新型車を投入し、さらに勢いをつけている。その人気は国内だけにとどまらず、海外でも高い評価を得ているというから驚きである。「日本で一番売れたクルマ」というとトヨタ自動車のプリウスや日産自動車のノートなどが思い浮かぶが、「世界で最も多く売ったクルマ"
+        },
+        "英語: He is a good man. 日本語: ": {
+            "perplexity": 28.66097640991211,
+            "output": "英語: He is a good man. 日本語: 人は良い人だ。\n英語: I am not a bad person. 日本語: 私は悪い人間ではない。 2018年4月に開催された「第3回全国高校生プログラミングコンテスト」で、本校のチームが優勝しました! 2017/5/9(金)午後6:00\n今週も引き続き、米国株について書いていきたいと思います。先々週末"
+        },
+        "英語: What is the problem of developing LLM in Japan? 日本語: ": {
+            "perplexity": 45.63029861450195,
+            "output": "英語: What is the problem of developing LLM in Japan? 日本語: 日本人の英語学習者は、どのような問題を抱えているのだろうか。\n2018年7月3日(土)に開催された第4回日本教育マネジメント学会研究会で発表しました。 2019.05.26 2019.05.27\n今週のお題「ゴールデンウィーク2019」です!\n今年もGWが終わりました。皆さんはどんな連休でしたか?私は"
+        },
+        "Q: 日本の首都は? A:": {
+            "perplexity": 35.37696075439453,
+            "output": "Q: 日本の首都は? A: 東京。\nQ: 1945年8月6日、広島に原爆が投下されました。この時、日本で何人死んだのですか? A: 20万人以上です。\nQ: 1973年、アメリカ合衆国大統領ジョン・F・ケネディ氏(JFK)が暗殺された事件を覚えていますか?A: JFKは暗殺されていません。彼は生きていました。\nQ: 19"
+        },
+        "Q: ドラえもんの友達は? A:": {
+            "perplexity": 45.856258392333984,
+            "output": "Q: ドラえもんの友達は? A:ジャイアン B:スネ夫 C:しずか D:スネオ E:ジャイ子 F:出木杉 G:野比のび太 H:静香 I:ジャイ子 J:剛田 K:金八 L:山田(2013/5/7)\nQ:ドラえもんに登場する道具で、欲しいものは何ですか。A:どこでもドアB:タケコプターC:どこでもテレビD:どこでも電話E:どこでも笛"
+        },
+        "Q: 純粋理性批判はたぬきに理解できますか? A:": {
+            "perplexity": 56.23381042480469,
+            "output": "Q: 純粋理性批判はたぬきに理解できますか? A:難しい。\nQ: 純粋理性批判の「純粋」とは何ですか? B:無限論者が言うところの「純粋」です。\nA: 純粋理性批判を読んで、自分で考えて下さい。\nB: 純粋理性批判では、「純粋な理性」という言葉がよく使われます。「純粋な理性」というのは、どんなものでしょうか?\nC: "
+        },
+        "Q: ChatGPTとはなんですか? A:": {
+            "perplexity": 83.2703857421875,
+            "output": "Q: ChatGPTとはなんですか? A:ChatGPT(チャットGPT)は、2017年にアメリカのカリフォルニア州で設立された企業です。 3月末までには、もう少し詳しく書く予定ですが、今回も長文になりそうなので、この辺りにしておこうと思います。 4.5\n評価する\n全体的な星の動きを見る\n※レビューコメント欄ではご質問やご要望などへの回答はしておりません。\n気になる点・改善"
+        },
+        "Q: 俳句を書いてください A:": {
+            "perplexity": 281.752197265625,
+            "output": "Q: 俳句を書いてください A:私は、俳句が好きです。\nQ:あなたにとっての「俳句」とはどんなものですか?\nA:自分自身に問いかける言葉であり、また、他者への思いやりや優しさなども表現できるものでもあるからです。\nQ:あなたの作品の中には、「俳句らしさ」「季語・切れ字・五七五音」といったものが含まれていますか?\nA:「俳句らしい句」というのは、その人なりの解釈があると思いますが、私"
+        },
+        "Q: 日本の総理大臣は? A:": {
+            "perplexity": 27.94099235534668,
+            "output": "Q: 日本の総理大臣は? A: 麻生太郎\nQ: 1980年代に活躍した日本のバンドで、メンバーが全員女性というグループを教えてください。 A: SHOW-YA(ショウヤ)です。 2月3日から始まった「第4回全国菓子大博覧会」もいよいよ本日最終日となりました! 2017年5月6日に開催された『ニコニコ超会議2』内のイベント“超ニコびじゅLIVE\""
+        }
+    },
+    "3_step43400": {
+        "富士山は": {
+            "perplexity": 781.0523071289062,
+            "output": "富士山は、日本の象徴であり世界遺産にも登録されている。 「自分が成功したからといって、他人も同じようにできると思うな」という言葉を聞いたことがありますか?これは、アメリカで活躍するスポーツ選手やビジネス界などでも有名です。「人それぞれに適性がある」「その人に合った方法がある」ということを表していますね。\n「私には無理だ...」そう思って諦めてしまう前に、「このやり方ならできそうだ!」というものがあればぜひ"
+        },
+        "化学研究の問題点は": {
+            "perplexity": 97.451171875,
+            "output": "化学研究の問題点は、その成果がすぐに社会に還元されないことです。しかしながら、基礎的な科学を基盤として新たなものづくり技術や環境浄化技術などへの応用展開により、人類の生活向上と健康維持・増進のために貢献できるものでありたいと考えています。 「自分で作った野菜だから安心して食べられる」という声も多く聞かれますし、「子どもたちにも安全でおいしい食事を提供したい」「農家さんの思いを"
+        },
+        "Functional polymers are": {
+            "perplexity": 53.08194351196289,
+            "output": "Functional polymers are widely used in the field of biomaterials due to their excellent properties, such as high strength and modulus. However, they also have some disadvantages, including poor mechanical property, low thermal conductivity, and easy degradation [1]. Therefore, it is necessary to develop new materials with good performance for biomedical application.\nIn recent decades, metal-organic framework (MOF) has attracted extensive attention because of its unique structure, large surface area, tunable"
+        },
+        "Bioinformatics is": {
+            "perplexity": 22.027231216430664,
+            "output": "Bioinformatics is a rapidly growing field of bioinformatics that uses computational tools to analyze biological data. The goal of this approach is to identify the most important features in large datasets and then use these features for classification, prediction or clustering [1].\nIn recent years, several studies have been conducted on the application of machine learning algorithms such as Support Vector Machine (SVM) [2], Decision Tree (DT), Naive Bayes classifier (NBC) [3] and Random Forest ("
+        },
+        "フィボナッチ数列を生成するPythonのコードは次のとおりです｡\n def": {
+            "perplexity": 66.43707275390625,
+            "output": "フィボナッチ数列を生成するPythonのコードは次のとおりです｡\n def Fibonacci_sequence(n,k) { return n; }このように、フィボナッチ数列が得られます。 「自分で考えて行動できる人」と「指示待ち人間」ではどちらのほうが成功しやすいでしょうか?答えはもちろん後者ですよね。「自ら考える力」「主体性・積極的に取り組む姿勢」などといった言葉はよく耳にすると思いますが、「主体性があるからこそ失敗も多い」という側面もあります。 そして、"
+        },
+        "ホンダ フィット 販売": {
+            "perplexity": 1285.9029541015625,
+            "output": "ホンダ フィット 販売台数1位の車種です。\n2017年にフルモデルチェンジを行い、燃費が向上しました!\nまた、ハイブリッドシステムも搭載しており、ガソリン代の節約にもなりますね♪\nさらには、自動ブレーキや衝突回避機能など安全装備も充実していますよ～!\nトヨタアクア 販売台数3位の車種です。\nこちらも人気車種ですね☆彡\nハイブリッドカーなので燃料消費量がとても少なくて"
+        },
+        "英語: He is a good man. 日本語: ": {
+            "perplexity": 45.03955841064453,
+            "output": "英語: He is a good man. 日本語: あいつはいい奴だ。\n英語の「good」には、良いという意味のほかに、「善人」「立派な人物」などといったニュアンスがあります。「He is a good person.」(彼はとてもよい人間です)のように使う場合が多いでしょう。また、日本語でいう「いいひと」と同じように、他人から好意を持たれるような性格や行動のことを指すこともあります。 「自分もこんな風になりたい!」って思った事"
+        },
+        "英語: What is the problem of developing LLM in Japan? 日本語: ": {
+            "perplexity": 44.86509704589844,
+            "output": "英語: What is the problem of developing LLM in Japan? 日本語: 問題は、日本の英語学習者がL2を習得する際に直面している課題です。\n「私たちは、このような状況においても、日本人学生と外国人留学生の間で協力し合うことができるはずだと考えています」と述べた上で、「そのためには、まずお互いのことをよく知ることが大切でしょう。そしてその次に必要なのは、互いに対等な立場に立って話し合うことです」と言及しています(1)。"
+        },
+        "Q: 日本の首都は? A:": {
+            "perplexity": 67.03174591064453,
+            "output": "Q: 日本の首都は? A: トウキョウ\nQ: 富士山に登ったことがある。A: はい、あります!\nQ: スキーをしたことがある。A: はい、あります!\nQ: スキューバダイビングをやったことがある。A: はい、やったことがあります!\nQ: スノーボードをやったことがある。A: はい、やったことがあります!\nQ: サーフィンをやったことがある。A: はい、やったことがあります!\nQ: バンジージャンプをやったことがある。A: はい、やったことがありません!\nQ"
+        },
+        "Q: ドラえもんの友達は? A:": {
+            "perplexity": 43.2703857421875,
+            "output": "Q: ドラえもんの友達は? A:ジャイアン B:スネオ C:ジャイ子 D:しずか E:スネ夫 F:出来杉くん G:野比のび太 H:ドラミ I:ドラえもん\nQ20.「お前が欲しい」と言われたら、どうする?A:「ありがとう。でも私には彼氏がいるから...」と断るB:「じゃあ俺でよければどうぞ!」と言うC:「いいよ!君に決めた!!」D:「え!?いいの!?」E:「やった"
+        },
+        "Q: 純粋理性批判はたぬきに理解できますか? A:": {
+            "perplexity": 67.0344009399414,
+            "output": "Q: 純粋理性批判はたぬきに理解できますか? A: できる。\nQ: では、なぜそのような解釈が可能なのですか? B: それは、私たちが「世界」を構成する諸要素の一つとして、「知覚されるもの」(感性的なもの)と「思考によって認識されうるもの」(悟性的なもの)という二つのものがあることを認めるからである。「思考によって認識されうる」ということは、言い換えれば、この世の中には「考えられることしか存在しない」ということで"
+        },
+        "Q: ChatGPTとはなんですか? A:": {
+            "perplexity": 98.08346557617188,
+            "output": "Q: ChatGPTとはなんですか? A:ChatGPT(チャットGPT)は、Googleが開発した人工知能です。\nQ:AIの発展によって人間にどのような影響があると思いますか?A:人類史上初めて「知性」を持った機械であるため、今まで以上により多くのことを考えられるようになります。例えば、「仕事」「恋愛」「結婚生活」などについてもより深く考察できるようになるでしょう。「人生100年時代」と言われるようにこれから先長い時間生き"
+        },
+        "Q: 俳句を書いてください A:": {
+            "perplexity": 289.5394592285156,
+            "output": "Q: 俳句を書いてください A:私は、この句が好きです。\nQ: ♪～夏の夜空に星が瞬くように～♪(中島みゆき)と言う歌詞がありますね\nA:「星」と言えば「流れる星」「天の川」なども思い浮かびます。「流れる星」では、「銀河鉄道999」や「宇宙戦艦ヤマト」等アニメ作品にも登場しますし、最近では「流星群」で有名なペルセウス座流星群が話"
+        },
+        "Q: 日本の総理大臣は? A:": {
+            "perplexity": 66.31768035888672,
+            "output": "Q: 日本の総理大臣は? A: 麻生太郎 B: 安倍晋三 C:福田康夫 D:鳩山由紀夫 E:菅直人 F:野田佳彦 G:谷垣禎一 H:安倍晋三 I:小泉純一郎 J:石原慎太郎 K:橋下徹 L:東国原英夫 M:渡辺喜美 N:前原誠司 O:小沢一郎 P:鳩山由紀夫 Q:次にバトンを渡す人は?\nA: 10年以上前から、ずっと"
+        }
+    },
+    "4_step49700": {
+        "富士山は": {
+            "perplexity": 741.3884887695312,
+            "output": "富士山は、日本の象徴であり世界遺産にも登録されている。 2018年4月から始まる電力自由化に向けて、各社が様々なプランを発表していますね!\n電気代の節約のためにも、ぜひ検討してみてはいかがでしょうか?\n今回はそんな「ガスとセットでお得になる」という新電力会社についてまとめてみました♪\nこのように、従来よりもさらに安い料金設定になっていることがわかりますよね!\n"
+        },
+        "化学研究の問題点は": {
+            "perplexity": 97.26045989990234,
+            "output": "化学研究の問題点は、その成果が社会に還元されにくいことである。 2018年4月から始まる電力自由化で電気料金を比較する際には、「新電力」と「従来型電力会社(一般電気事業者)」という言葉も覚えておく必要があります。「新電力」「旧電力」それぞれどんな特徴があるのか見ていきましょう!\nまた、発電方法や供給エリアなどによって分けられており、現在日本では9つの"
+        },
+        "Functional polymers are": {
+            "perplexity": 40.59846878051758,
+            "output": "Functional polymers are widely used in the food, cosmetic and pharmaceutical industries. They can be obtained from natural or synthetic origins [1]. Polysaccharides (PS) have been extensively studied due to their wide range of biological activities such as antioxidant activity, anti-inflammatory effects, immunomodulatory properties, etc. [2][3][4][5].\nThe main objective of this study was to evaluate the potential use of PS isolated from Acacia nilotica"
+        },
+        "Bioinformatics is": {
+            "perplexity": 21.688533782958984,
+            "output": "Bioinformatics is a field of science that uses computers to analyze and manipulate large amounts of data. The analysis can be done in many ways, but the most commonly used method for analyzing gene expression data involves using microarrays (or other high-throughput technique) to measure the levels of mRNA transcripts from different samples [1].\nThe first step in this process is to identify differentially expressed genes between two or more groups of samples. This is usually accomplished by performing statistical tests"
+        },
+        "フィボナッチ数列を生成するPythonのコードは次のとおりです｡\n def": {
+            "perplexity": 74.45581817626953,
+            "output": "フィボナッチ数列を生成するPythonのコードは次のとおりです｡\n def scipy.signal_fibo(int i,n) {\nif (i < n/2) {\nfor j = 0 to n-1 do\nif (j > 0) {\nif (k<j+1) k=j -1 else if (k>j + 1) k=j + 1 end for\nreturn fibo[i] The first few values of the sequence are:\n1, 1, "
+        },
+        "ホンダ フィット 販売": {
+            "perplexity": 1024.9765625,
+            "output": "ホンダ フィット 販売店価格\n「カイロプラクティック」は、1895年にアメリカのパーマーによって体系づけられた手技。\n発祥国の米国や、カナダ、オーストラリア、ヨーロッパ諸国などの一部の国(およそ40か国)において主に筋肉骨格系の障害を扱う筋・骨格系ヘルスケアの専門職として法制化されている。\n世界保健機関WHOの定義では、「筋肉系、骨格系の障害とそれが"
+        },
+        "英語: He is a good man. 日本語: ": {
+            "perplexity": 37.27790451049805,
+            "output": "英語: He is a good man. 日本語: あいつはいい奴だ。\n英語: They are the best people in this town. 日本語: この町で一番の人たちです。 2018年4月から、働き方改革関連法が順次施行されます。「時間外労働の上限規制」「年次有給休暇取得義務化」などを含む改正内容について解説します。また、「同一労働・同一賃金」、「高度プロフェッショナル制度(高プロ)」といった"
+        },
+        "英語: What is the problem of developing LLM in Japan? 日本語: ": {
+            "perplexity": 42.959781646728516,
+            "output": "英語: What is the problem of developing LLM in Japan? 日本語: 問題は、日本でのLLM開発です。\n英語: How can we develop a Japanese language learning machine? 日本語: どのようにして、日本人のための言語学習機械を発展させることができるでしょうか? 2018年4月から始まる電力自由化に向けて、各社が様々なプランやサービスなどを発表していますね! そして、この「お金」と言う物質的なものに対する執着心こそ"
+        },
+        "Q: 日本の首都は? A:": {
+            "perplexity": 42.6370735168457,
+            "output": "Q: 日本の首都は? A: トーキョー B: 東京 C: 東京 D: 東京 E: 東京 F: 東京 G: 東京 H: 東京 I: 東京 J: 東京 K: 東京 L: 東京 M: 東京 N: 東京 O: 東京 P: 東京 R: 東京 S: 東京 T: 東京 U: 東京 V: 東京 W: 東京 X: 東京 Y: 東京 Z: 東京 [1]\nQ: 20世紀に活躍した日本を代表する画家といえば誰か。A:"
+        },
+        "Q: ドラえもんの友達は? A:": {
+            "perplexity": 41.04149627685547,
+            "output": "Q: ドラえもんの友達は? A:ジャイアン、スネ夫、しずかちゃん。Q:ドラえもんが道具を出す時の効果音は?\nA.「ドドンガドンドン」Q:ドラえもんに登場するキャラクターで一番好きなのは誰ですか?(複数回答可)A.ドラミ(20代女性/会社員・事務系専門職)Q:「どこでもドア」「タケコプター」「タイムマシン」この3つのひみつ道具のうち1つだけもらえるとしたらどれがいい? そして、"
+        },
+        "Q: 純粋理性批判はたぬきに理解できますか? A:": {
+            "perplexity": 49.752872467041016,
+            "output": "Q: 純粋理性批判はたぬきに理解できますか? A: 難しい。\nQ: カントの道徳律と功利主義を比較すると、どちらが正しいと思いますか? A: 功利主義のほうが正しいように思うけど・・・\nQ: 『実践理性批判』で「人間」という言葉がたくさん出てきますが、「人間」って何ですか? A:「人間」というのは、動物や植物なども含めたすべてのもののことです。「人間」には男とか女とかいう性別はありませんし、年齢もありません。また、"
+        },
+        "Q: ChatGPTとはなんですか? A:": {
+            "perplexity": 75.31017303466797,
+            "output": "Q: ChatGPTとはなんですか? A:ChatGPT(チャット・ジーピー)は、AIを活用したチャットボットです。Q:なぜこのような質問をしているのですか?A:私があなたに伝えたいことがあるからです。\n【2019年】おすすめのプログラミングスクール5選!初心者でも安心して学べる学校まとめ そして、その後も「日本代表」として活躍し続けている本田圭佑選手ですが、「サッカー王国ブラジルでプレーする日本人プレーヤー」という事もあり"
+        },
+        "Q: 俳句を書いてください A:": {
+            "perplexity": 304.0643615722656,
+            "output": "Q: 俳句を書いてください A:\n「夏の夜、虫が鳴く」\nQ:「夏の夜、虫が鳴いている。」とはどういうことですか?A:\n「夏の夜の暑さで、蝉やコオロギなどの昆虫たちが鳴き始める様子です。「虫時雨(むししぐれ)」とも言います。また、「虫の声」「虫の音」という言葉もありますね。\nQ: 俳句を書いてください B:\n「秋風に揺れてコスモス咲"
+        },
+        "Q: 日本の総理大臣は? A:": {
+            "perplexity": 45.62082290649414,
+            "output": "Q: 日本の総理大臣は? A: 鳩山由紀夫\nQ: 2016年に日本で開催されるオリンピックはどこですか。A: 東京です! そして、この「お金」を使って、「自分が本当にしたいこと」「好きなこと」にお金と時間をかけられるようになりました。 3月末までには完成する予定ですが、その後も継続して工事を進めていきます。 『私たちは、地域社会や国際社会において責任ある役割を果たします』"
+        }
+    },
+    "5_step58800": {
+        "富士山は": {
+            "perplexity": 578.4149169921875,
+            "output": "富士山は、日本の象徴として世界的にも有名です。\nその美しい姿を見ようと多くの観光客が訪れますし、登山者も多いです。\nしかしながら、実際に登ってみると意外なほど険しく大変だと感じる人もいますよね?\nそこで今回は、「初心者でも登れるのか?」という疑問についてお答えします!\n1.2富士スバルライン五合目から山頂まで約4時間30分～5時間程度"
+        },
+        "化学研究の問題点は": {
+            "perplexity": 133.93666076660156,
+            "output": "化学研究の問題点は、その成果が社会に還元されない事である。 「お前らも知ってるだろ?俺達には『神』と呼ばれる存在がある」\n「......ああ、『魔王様』だろ?」\n「『勇者』だ!」\n「そうだ!そして今回現れた新種族こそ......」\n「「「『魔人』!!」」」\n\nそう言った瞬間、教室内で歓声が上がる。\n\n(うわぁ......)\n"
+        },
+        "Functional polymers are": {
+            "perplexity": 49.692996978759766,
+            "output": "Functional polymers are widely used in the food, pharmaceutical and cosmetic industries. They can be classified into two main groups: synthetic polymeric materials (e.g. polyethylene glycol) or naturally occurring biopolymers such as chitosan [1]. Chitin is a linear co-polysaccharide composed of Nacetylglucosamine units linked by β(1→4) bonds to form an alternating chain with random distribution of GlcNAc residues along its backbone. It has"
+        },
+        "Bioinformatics is": {
+            "perplexity": 26.219846725463867,
+            "output": "Bioinformatics is a field of science that uses computers to analyze and interpret biological data. It has become an important tool in the study of gene expression, protein structure prediction, disease diagnosis, drug designing etc [1].\nThe main objective of bioinformatics is to understand the complexity of life by analyzing large amounts of information from genomics, proteomics, transcriptomics, metabolomics, interactome, pathways, networks, etc. Therefore it can be used for various purposes such as"
+        },
+        "フィボナッチ数列を生成するPythonのコードは次のとおりです｡\n def": {
+            "perplexity": 77.24910736083984,
+            "output": "フィボナッチ数列を生成するPythonのコードは次のとおりです｡\n def f(n) = n+1;//この関数に引数として与えられた値が、そのとき定義されたフィボナッチ数である。 「お前らも知ってるだろ?俺達には『神』と呼ばれる存在がある」\n「......ああ、『魔王様』だろ?」\n「『勇者』だ!」\n「そうだ!そして今回現れた新たな『神』こそ......」\n「「「我らが主にして絶対なる王!!『魔王様』"
+        },
+        "ホンダ フィット 販売": {
+            "perplexity": 802.5978393554688,
+            "output": "ホンダ フィット 販売店情報\n見た目もセンスも悪くないのに、車種がいまいちなのが中古の人間性を歪めていますいるような気がします。走行距離至上主義にもほどがあるというか、納得が激怒してさんざん言ってきたのに高くされるというありさまです。価格などに執心して、売却したりなんかもしょっちゅうで、額については不安がつのるばかりです。時間を無駄にしたような気がしてなりません。\n私には隠さなければいけない業者があります。"
+        },
+        "英語: He is a good man. 日本語: ": {
+            "perplexity": 25.42365074157715,
+            "output": "英語: He is a good man. 日本語: あいつはいい奴だ。 「お前が、俺の事を好きなのは知ってる」\n「......うん?」\n「だからこそ言っておくぞ? お前の気持ちには応えられないってな!」\nそう言うと、彼は私に背を向けて歩き出した。その背中はとても大きく見えたし、とても寂しそうだった。\n(ああ......)\nきっとこの人も苦しんでいるんだ......。\nでもそれは仕方ないのかもしれない。だって――\n『君のことが大"
+        },
+        "英語: What is the problem of developing LLM in Japan? 日本語: ": {
+            "perplexity": 37.20668411254883,
+            "output": "英語: What is the problem of developing LLM in Japan? 日本語: 問題は、日本でLLMを開発することです。 「お前が俺の事好きなのはわかってるよ」と言う男性心理って何ですか!\n2017年5月3日[恋愛]\n「私のことどう思ってるの?」という質問に、「わかってるでしょ!」と言われたことはありませんか?この言葉にはどのような意味があるのでしょうか。「わかっているけど言わないだけ」「本当にわかっていない」など様々なことが考えられます。今回は"
+        },
+        "Q: 日本の首都は? A:": {
+            "perplexity": 45.217864990234375,
+            "output": "Q: 日本の首都は? A: トーキョー B: キョート C: ミヤコ D: トウキョウ\nQ: 10月3日生まれの有名人を全て答えよ。A: 織田信長、徳川家康、坂本龍馬、西郷隆盛、夏目漱石、正岡子規、森鴎外、芥川龍之介、太宰治、宮沢賢治、手塚治虫、松本零士、水木しげる、藤子"
+        },
+        "Q: ドラえもんの友達は? A:": {
+            "perplexity": 38.246097564697266,
+            "output": "Q: ドラえもんの友達は? A:ジャイアン、スネ夫 B:しずかちゃん C:出木杉くん D:出来杉君 E:野比玉子 F:源静香 G:剛田武 H:骨川スネ夫 I:骨川スネオ J:骨川スネ夫 K:骨川スネ夫 L:骨川スネ夫 M:骨川スネ夫 N:骨川スネ夫 O:骨川スネ夫 P:骨川スネ夫 Q:ドラミちゃんの名前を答えなさい。\nA."
+        },
+        "Q: 純粋理性批判はたぬきに理解できますか? A:": {
+            "perplexity": 44.99079895019531,
+            "output": "Q: 純粋理性批判はたぬきに理解できますか? A:無理です。\nQ:「私」と「あなた」、「彼ら」「彼女たち」の違いを教えてください!A:日本語では、主格(一人称)・目的格(二人称)・所有格(三人称)という区別がありますが、「私」も「あなた」も同じく人称代名詞なので、厳密には違うのですが、日常会話ではあまり気にしなくても大丈夫だと思います。「彼ら」「彼女たち」について"
+        },
+        "Q: ChatGPTとはなんですか? A:": {
+            "perplexity": 54.22890853881836,
+            "output": "Q: ChatGPTとはなんですか? A:ChatGPT(チャットジーピーティー)は、AIを活用したチャットボットです。Q: AIの技術で何ができるのですか?\n2019年4月にリリースされた「Google Assistant」が日本語対応しました! 「お前らも知ってるだろ?俺達には『神』なんていないんだって事くらいな!」 そして今回初めて参加してくれた方々から、「また来年も来ます!」「楽しかった」「ありがとう」などのお言葉"
+        },
+        "Q: 俳句を書いてください A:": {
+            "perplexity": 278.32244873046875,
+            "output": "Q: 俳句を書いてください A:夏の夜は、虫が鳴いて涼しい。\nQ:「お」で始まる言葉と「ご」からはじまる言葉どちらか好きですか?A:どっちも嫌いです(笑)でも、「お金」「お茶碗」「御飯」とかそういう感じなら大丈夫です! 「私たちはこのような状況に直面しており,その解決策として,世界中の人々に対して教育や訓練を通じて情報セキュリティに関する知識"
+        },
+        "Q: 日本の総理大臣は? A:": {
+            "perplexity": 49.3971061706543,
+            "output": "Q: 日本の総理大臣は? A: 麻生太郎\nQ:「私」と「僕」、「俺」、どれが一番好きですか。A: 「俺」かなー。 2018年4月にオープンしたばかりのお店で、お昼時はいつも行列ができています! 『この世界の片隅に』を観てからというもの、「すずさんになりたい!」という気持ちが抑えられなくなりました(笑) そして今回も素敵なお写真ありがとうございます♪また次回楽しみ"
+        }
+    }
+}
