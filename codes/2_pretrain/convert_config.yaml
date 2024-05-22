@@ -1,5 +1,5 @@
-input_model_dir: ../../models/snapshots/gpt_8B_tok300B_lr2e-05_min2e-06_w2000M_d193B_cosine_gbs1536_mbs3_g24_z1_pp3_seed1234_rebase/global_step37800
-output_tokenizer_and_model_dir: ../../models/hf/2_step37800
-huggingface_name: 1_step30800
+input_model_dir: ../../models/snapshots/global_step300
+output_tokenizer_and_model_dir: ../../models/hf/epoch3_step300
+huggingface_name: epoch3_step300
 test_prompt_text: こんにちは､
 temp_dir: ../../models/temp
